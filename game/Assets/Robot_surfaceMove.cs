@@ -7,6 +7,7 @@ public class Robot_surfaceMove : MonoBehaviour {
 	public bool moving = false;
 	public Transform dest;
 	public float jitter = .1f;
+	public bool selected = false;
 
 	// Use this for initialization
 	void Start () {
@@ -21,13 +22,13 @@ public class Robot_surfaceMove : MonoBehaviour {
 			transform.LookAt(dest);
 			float step = speed * Time.deltaTime;
 			transform.position = Vector3.MoveTowards (transform.position, dest.position, step);
-		//	jitter = jitter * -1;
-		//	Vector3 temp = new Vector3(0,jitter,0);
-		//	Debug.Log ("Jitter:" + jitter);
-		//	transform.position += temp; 
+								//	jitter = jitter * -1;
+								//	Vector3 temp = new Vector3(0,jitter,0);
+								//	Debug.Log ("Jitter:" + jitter);
+								//	transform.position += temp; 
 		}
 
-		if (Input.GetMouseButton (0)) {
+	/*	if (Input.GetMouseButton (0)) {
 			moving = false;
 			RaycastHit hitInfo = new RaycastHit ();
 			if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hitInfo)) {
@@ -40,9 +41,8 @@ public class Robot_surfaceMove : MonoBehaviour {
 				if (hitInfo.collider.tag == "TubeEntrance" || hitInfo.collider.tag == "Building")	{
 					moving = true;
 					dest = hitInfo.collider.transform;
-
 				}
 			}
-		}
+		}*/
 	}
 }
