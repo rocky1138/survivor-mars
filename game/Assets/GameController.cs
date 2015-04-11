@@ -24,7 +24,6 @@ public class GameController : MonoBehaviour {
 						//Debug.Log("XYZ" + hitInfo.transform.position);
 						if (hitInfo.collider.tag == "Robot_surface")	{
 							currentRobot = hitInfo.transform.gameObject;
-							hitInfo.transform.renderer.material.color = Color.green;
 							//moving = true;
 							//dest = hitInfo.collider.transform;
 						}
