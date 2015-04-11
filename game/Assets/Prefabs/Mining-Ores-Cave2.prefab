@@ -239,6 +239,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 468452}
+  - 114: {fileID: 11467128}
   m_Layer: 0
   m_Name: Mining-Ores-Cave2
   m_TagString: Untagged
@@ -1030,6 +1031,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191050}
   m_Mesh: {fileID: 4300110, guid: 29f42584c1f8b0a48ba99f965bace9db, type: 3}
+--- !u!114 &11467128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f04bfab7fc720146821527afa8ec9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceOfDisablePercent: 10
 --- !u!135 &13522826
 SphereCollider:
   m_ObjectHideFlags: 1
