@@ -111,7 +111,7 @@ GameObject:
   - 135: {fileID: 13504278}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +145,7 @@ GameObject:
   - 135: {fileID: 13504280}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,7 @@ GameObject:
   - 135: {fileID: 13504282}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,7 +259,7 @@ GameObject:
   - 135: {fileID: 13504284}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -394,7 +394,7 @@ GameObject:
   - 135: {fileID: 13504288}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,7 +462,7 @@ GameObject:
   - 135: {fileID: 13504290}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -692,7 +692,7 @@ GameObject:
   - 135: {fileID: 13504292}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1096,7 +1096,7 @@ GameObject:
   - 135: {fileID: 13504294}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1311,7 +1311,7 @@ GameObject:
   - 135: {fileID: 13504296}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1688,7 +1688,7 @@ GameObject:
   - 135: {fileID: 13504298}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1757,7 +1757,7 @@ GameObject:
   - 135: {fileID: 13504302}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1956,7 +1956,7 @@ GameObject:
   - 135: {fileID: 13504308}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2133,7 +2133,7 @@ GameObject:
   - 135: {fileID: 13504310}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2301,7 +2301,7 @@ GameObject:
   - 135: {fileID: 13504314}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2319,7 +2319,7 @@ GameObject:
   - 135: {fileID: 13504316}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2355,7 +2355,7 @@ GameObject:
   - 135: {fileID: 13504320}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2438,7 +2438,7 @@ GameObject:
   - 135: {fileID: 13504322}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3456,7 +3456,7 @@ GameObject:
   - 135: {fileID: 13535700}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3523,7 +3523,7 @@ GameObject:
   - 135: {fileID: 13535702}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3557,7 +3557,7 @@ GameObject:
   - 135: {fileID: 13535704}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3810,7 +3810,7 @@ GameObject:
   - 135: {fileID: 13535706}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3925,7 +3925,7 @@ GameObject:
   - 135: {fileID: 13535708}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3974,7 +3974,7 @@ GameObject:
   - 135: {fileID: 13535710}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4089,7 +4089,7 @@ GameObject:
   - 135: {fileID: 13535714}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4125,7 +4125,7 @@ GameObject:
   - 135: {fileID: 13535716}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4261,7 +4261,7 @@ GameObject:
   - 135: {fileID: 13535720}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4774,7 +4774,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.00119996, y: 0, z: -4.7185998}
+  m_LocalPosition: {x: 1.00119996, y: .100000001, z: -4.7185998}
   m_LocalScale: {x: .0100000007, y: .0100000007, z: .0100000007}
   m_Children: []
   m_Father: {fileID: 404288}
@@ -6515,7 +6515,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .976672351, y: 0, z: -3.91624904}
+  m_LocalPosition: {x: .976672351, y: .100000001, z: -3.91624904}
   m_LocalScale: {x: .00100000005, y: .00100000005, z: .00100000005}
   m_Children: []
   m_Father: {fileID: 404178}
@@ -7396,7 +7396,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00899999961, y: 0, z: .779999971}
+  m_LocalPosition: {x: .00899999961, y: .100000001, z: .779999971}
   m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 435850}
