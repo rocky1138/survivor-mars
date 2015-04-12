@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 	public GameObject currentRobot = null;
@@ -7,6 +9,7 @@ public class GameController : MonoBehaviour {
 	public GameObject[] Robots;
 	public GameObject[] RobotButtons;
 	public GameObject[] SpawnPoints;
+	public GameObject CamToggleButton;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +24,7 @@ public class GameController : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (Input.GetMouseButton (0)) {
+		if (Input.GetMouseButton (0) && !EventSystem.current.IsPointerOverGameObject()) {
 			RaycastHit hitInfo = new RaycastHit ();
 			if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hitInfo)) {
 				//print (hitInfo.transform.tag);
@@ -38,7 +41,9 @@ public class GameController : MonoBehaviour {
 								DeselectRobot();
 							}
 										currentRobot = hitInfo.transform.gameObject;
+										//DUPLICATE CODE DUE TO LAZINESS SEE FUNCTION BELOW
 										if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
+											CamToggleButton.SetActive(true);
 											currentRobot.transform.GetChild(1).gameObject.SetActive(true);
 										}
 										currentRobot.transform.GetChild(3).gameObject.SetActive(true);
@@ -76,6 +81,7 @@ public class GameController : MonoBehaviour {
 					}
 						if (hitInfo.collider.tag == "GamePlane" )	{
 							//oldRobot = currentRobot;
+							//Debug.Log ("GUI  " + !EventSystem.current.IsPointerOverGameObject());
 							DeselectRobot();
 
 							
@@ -93,15 +99,17 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void EnterTube(int tube, GameObject robot){
-	
+			CamToggleButton.SetActive(true);
 			robot.transform.position = SpawnPoints[tube].transform.position;
 
 
 	}
 
 	public void SelectRobot (int num){
+		DeselectRobot ();
 		currentRobot = Robots[num];
 		if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
+			CamToggleButton.SetActive(true);
 			currentRobot.transform.GetChild(1).gameObject.SetActive(true);
 		}
 		currentRobot.transform.GetChild(3).gameObject.SetActive(true);
@@ -114,5 +122,10 @@ public class GameController : MonoBehaviour {
 						currentRobot.transform.GetChild (3).gameObject.SetActive (false);
 						currentRobot = null;
 				}
+	}
+
+	public void CamToggler(){
+		Debug.Log ("CamToggler");
+
 	}
 }
