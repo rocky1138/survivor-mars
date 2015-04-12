@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour {
 				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 				Physics.Raycast (ray, out hitInfo, Mathf.Infinity);
 				Debug.DrawLine (ray.origin, hitInfo.point);
-				Debug.Log (hitInfo.transform.tag);
+				Debug.Log (hitInfo.collider.tag);
 
 
 						//Debug.Log("XYZ" + hitInfo.transform.position);
@@ -27,13 +27,11 @@ public class GameController : MonoBehaviour {
 							//moving = true;
 							//dest = hitInfo.collider.transform;
 						}
-						if (hitInfo.collider.tag == "TubeEntrance" || hitInfo.collider.tag == "Building")	{
-							if (currentRobot != null){
+						if (hitInfo.collider.tag == "TubeEntrance" || hitInfo.collider.tag == "CaveFloor" || hitInfo.collider.tag == "Building")	{
+							if (currentRobot != null) {
 								currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
 								currentRobot.GetComponent<Robot_surfaceMove>().moving = true;
 							}
-							//moving = true;
-							//dest = hitInfo.collider.transform;
 						}
 						if (hitInfo.collider.tag == "GamePlane" )	{
 							if (currentRobot != null){
@@ -43,7 +41,7 @@ public class GameController : MonoBehaviour {
 							//moving = true;
 							//dest = hitInfo.collider.transform;
 						}
-
+						
 
 			}
 		}
