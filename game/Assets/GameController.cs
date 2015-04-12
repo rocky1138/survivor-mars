@@ -38,6 +38,9 @@ public class GameController : MonoBehaviour {
 								DeselectRobot();
 							}
 										currentRobot = hitInfo.transform.gameObject;
+										if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
+											currentRobot.transform.GetChild(1).gameObject.SetActive(true);
+										}
 										currentRobot.transform.GetChild(3).gameObject.SetActive(true);
 										//moving = true;
 										//dest = hitInfo.collider.transform;
@@ -86,10 +89,16 @@ public class GameController : MonoBehaviour {
 
 	public void SelectRobot (int num){
 		currentRobot = Robots[num];
+		if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
+			currentRobot.transform.GetChild(1).gameObject.SetActive(true);
+		}
+		currentRobot.transform.GetChild(3).gameObject.SetActive(true);
 	}
 
 	public void DeselectRobot(){
 		if (currentRobot != null) {
+						currentRobot.transform.GetChild (1).gameObject.SetActive (false);
+						currentRobot.transform.GetChild (2).gameObject.SetActive (false);
 						currentRobot.transform.GetChild (3).gameObject.SetActive (false);
 						currentRobot = null;
 				}

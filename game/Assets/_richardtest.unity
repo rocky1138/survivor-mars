@@ -655,6 +655,7 @@ MonoBehaviour:
   dest: {fileID: 0}
   jitter: .400000006
   selected: 0
+  inTube: 0
 --- !u!95 &44317083
 Animator:
   serializedVersion: 3
@@ -1609,6 +1610,7 @@ MonoBehaviour:
   dest: {fileID: 0}
   jitter: .400000006
   selected: 0
+  inTube: 0
 --- !u!95 &85512793
 Animator:
   serializedVersion: 3
@@ -4757,6 +4759,7 @@ MonoBehaviour:
   dest: {fileID: 0}
   jitter: .400000006
   selected: 0
+  inTube: 0
 --- !u!95 &266494889
 Animator:
   serializedVersion: 3
@@ -6016,6 +6019,7 @@ MonoBehaviour:
   dest: {fileID: 0}
   jitter: .400000006
   selected: 0
+  inTube: 0
 --- !u!95 &362434505
 Animator:
   serializedVersion: 3
@@ -9900,6 +9904,7 @@ MonoBehaviour:
   dest: {fileID: 0}
   jitter: .400000006
   selected: 0
+  inTube: 0
 --- !u!95 &636393275
 Animator:
   serializedVersion: 3
@@ -16127,6 +16132,7 @@ MonoBehaviour:
   dest: {fileID: 0}
   jitter: .400000006
   selected: 0
+  inTube: 0
 --- !u!95 &993619512
 Animator:
   serializedVersion: 3
@@ -16710,6 +16716,7 @@ MonoBehaviour:
   dest: {fileID: 0}
   jitter: .400000006
   selected: 0
+  inTube: 0
 --- !u!95 &1048828184
 Animator:
   serializedVersion: 3
@@ -22869,6 +22876,7 @@ MonoBehaviour:
   dest: {fileID: 0}
   jitter: .400000006
   selected: 0
+  inTube: 0
 --- !u!95 &1458289595
 Animator:
   serializedVersion: 3
@@ -26564,6 +26572,7 @@ MonoBehaviour:
   dest: {fileID: 0}
   jitter: .400000006
   selected: 0
+  inTube: 0
 --- !u!95 &1686642047
 Animator:
   serializedVersion: 3
@@ -30491,6 +30500,7 @@ MonoBehaviour:
   dest: {fileID: 0}
   jitter: .400000006
   selected: 0
+  inTube: 0
 --- !u!65 &1906395024
 BoxCollider:
   m_ObjectHideFlags: 0

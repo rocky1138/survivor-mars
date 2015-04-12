@@ -8,6 +8,7 @@ public class Robot_surfaceMove : MonoBehaviour {
 	public Transform dest;
 	public float jitter = .1f;
 	public bool selected = false;
+	public bool inTube = false;
 	int tube;
 	// Use this for initialization
 	void Start () {
@@ -55,6 +56,7 @@ public class Robot_surfaceMove : MonoBehaviour {
 		//int tube;
 		Debug.Log ("Trigger with  " + other.tag);
 		if (other.tag == "TubeEntrance") {
+				inTube = true;
 				gameObject.transform.GetChild (1).gameObject.SetActive (true);
 				moving = false;
 				if (other.name == "LavaTube1") {
