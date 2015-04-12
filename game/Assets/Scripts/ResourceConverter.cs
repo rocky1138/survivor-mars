@@ -15,15 +15,15 @@ namespace MarsEndeavour {
     public Stockpile stockpile;
 
     ResourceConverter(int cycleTime) {
-      this.inputs = inputs;
-      this.outputs = outputs;
       this.cycleTime = cycleTime;
       this.progress = 0;
       this.ready = false;
     }
 
     void Start() {
-      stockpile = GameObject.Find("/ResourceController").GetComponent<Stockpile>();
+      if (!stockpile) {
+        stockpile = GameObject.Find("/Stockpile").GetComponent<Stockpile>();
+      }
       inputs = GetComponents<Input>();
       outputs = GetComponents<Output>();
     }
