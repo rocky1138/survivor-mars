@@ -5,7 +5,8 @@ public class Robot_surfaceMove : MonoBehaviour {
 	public float moveSpeed = 2.0f; // Units per second
 	public float speed = 5;
 	public bool moving = false;
-	public Transform dest;
+	//public Transform dest;
+	public Vector3 target;
 	public float jitter = .1f;
 	public bool selected = false;
 	public bool inTube = false;
@@ -15,37 +16,25 @@ public class Robot_surfaceMove : MonoBehaviour {
 	
 	}
 
-
 	// Update is called once per frame
 	void Update () {
 
-		if (moving == true && transform.position != dest.position) {
-			transform.LookAt(dest);
+		//if (moving == true && transform.position != dest.position) {
+			
+		if (moving == true && transform.position != target) {
+			
+			//transform.LookAt(dest);
+			transform.LookAt(target);
+			
 			float step = speed * Time.deltaTime;
-			transform.position = Vector3.MoveTowards (transform.position, dest.position, step);
+			
+			//transform.position = Vector3.MoveTowards (transform.position, dest.position, step);
+			transform.position = Vector3.MoveTowards (transform.position, target, step);
 								//	jitter = jitter * -1;
 								//	Vector3 temp = new Vector3(0,jitter,0);
 								//	Debug.Log ("Jitter:" + jitter);
 								//	transform.position += temp; 
 		}
-
-
-	/*	if (Input.GetMouseButton (0)) {
-			moving = false;
-			RaycastHit hitInfo = new RaycastHit ();
-			if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hitInfo)) {
-				//print (hitInfo.transform.tag);
-				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-				Physics.Raycast (ray, out hitInfo, Mathf.Infinity);
-				Debug.DrawLine (ray.origin, hitInfo.point);
-				Debug.Log (hitInfo.transform.tag);
-				Debug.Log("XYZ" + hitInfo.transform.position);
-				if (hitInfo.collider.tag == "TubeEntrance" || hitInfo.collider.tag == "Building")	{
-					moving = true;
-					dest = hitInfo.collider.transform;
-				}
-			}
-		}*/
 	}
 
 	void OnCollisionEnter(Collision other) {
@@ -53,8 +42,9 @@ public class Robot_surfaceMove : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		//int tube;
+		
 		Debug.Log ("Trigger with  " + other.tag);
+		
 		if (other.tag == "TubeEntrance") {
 				inTube = true;
 				gameObject.transform.GetChild (1).gameObject.SetActive (true);
