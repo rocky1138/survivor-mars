@@ -21,7 +21,7 @@ class ResourceConverter : MonoBehaviour {
     }
 
     void Start() {
-      if (!stockpile) {
+      if (stockpile == null) {
         stockpile = GameObject.Find("/Stockpile").GetComponent<Stockpile>();
       }
       inputs = GetComponents<ResourceInput>();
