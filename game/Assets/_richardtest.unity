@@ -687,7 +687,7 @@ GameObject:
   - 135: {fileID: 37684494}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -807,6 +807,8 @@ GameObject:
   - 114: {fileID: 44317082}
   - 65: {fileID: 44317081}
   - 54: {fileID: 44317086}
+  - 114: {fileID: 44317088}
+  - 114: {fileID: 44317087}
   m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
@@ -931,6 +933,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
+--- !u!114 &44317087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445510, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 44317079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc382828f7382ea45af36ba651308e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  amount: 1
+--- !u!114 &44317088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445528, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 44317079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f896eff6d96f8724dbf64a487d0d4ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: []
+  outputs: []
+  cycleTime: 1
+  online: 0
+  stockpile: {fileID: 0}
 --- !u!1001 &50491356
 Prefab:
   m_ObjectHideFlags: 0
@@ -1762,6 +1795,8 @@ GameObject:
   - 114: {fileID: 85512792}
   - 65: {fileID: 85512791}
   - 54: {fileID: 85512796}
+  - 114: {fileID: 85512798}
+  - 114: {fileID: 85512797}
   m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
@@ -1886,6 +1921,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
+--- !u!114 &85512797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445504, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 85512789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc382828f7382ea45af36ba651308e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  amount: 1
+--- !u!114 &85512798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445522, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 85512789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f896eff6d96f8724dbf64a487d0d4ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: []
+  outputs: []
+  cycleTime: 1
+  online: 0
+  stockpile: {fileID: 0}
 --- !u!1 &95669351
 GameObject:
   m_ObjectHideFlags: 0
@@ -5073,6 +5139,8 @@ GameObject:
   - 114: {fileID: 266494888}
   - 65: {fileID: 266494887}
   - 54: {fileID: 266494893}
+  - 114: {fileID: 266494895}
+  - 114: {fileID: 266494894}
   m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
@@ -5197,6 +5265,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
+--- !u!114 &266494894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445492, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 266494886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc382828f7382ea45af36ba651308e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  amount: 1
+--- !u!114 &266494895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11476496, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 266494886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f896eff6d96f8724dbf64a487d0d4ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: []
+  outputs: []
+  cycleTime: 1
+  online: 0
+  stockpile: {fileID: 0}
 --- !u!1 &275594977
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,7 +6124,7 @@ GameObject:
   - 135: {fileID: 309954276}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6447,6 +6546,8 @@ GameObject:
   - 114: {fileID: 362434504}
   - 65: {fileID: 362434503}
   - 54: {fileID: 362434509}
+  - 114: {fileID: 362434511}
+  - 114: {fileID: 362434510}
   m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
@@ -6571,6 +6672,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
+--- !u!114 &362434510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445494, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 362434502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc382828f7382ea45af36ba651308e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  amount: 1
+--- !u!114 &362434511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445512, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 362434502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f896eff6d96f8724dbf64a487d0d4ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: []
+  outputs: []
+  cycleTime: 1
+  online: 0
+  stockpile: {fileID: 0}
 --- !u!1 &365778409
 GameObject:
   m_ObjectHideFlags: 0
@@ -6703,6 +6835,9 @@ MonoBehaviour:
   Surface: {fileID: 650461127}
   Surface_PIP: {fileID: 2043936445}
   CamToggleState: 0
+  Laser: {fileID: 0}
+  laserMat: {fileID: 0}
+  target: {fileID: 0}
 --- !u!4 &374924764
 Transform:
   m_ObjectHideFlags: 0
@@ -7617,7 +7752,7 @@ GameObject:
   - 135: {fileID: 444723206}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8870,7 +9005,7 @@ GameObject:
   - 135: {fileID: 531582659}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9283,7 +9418,7 @@ GameObject:
   - 135: {fileID: 567218657}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9428,7 +9563,7 @@ GameObject:
   - 135: {fileID: 585453828}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9937,7 +10072,7 @@ GameObject:
   - 135: {fileID: 613441293}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10390,6 +10525,8 @@ GameObject:
   - 114: {fileID: 636393274}
   - 65: {fileID: 636393273}
   - 54: {fileID: 636393278}
+  - 114: {fileID: 636393280}
+  - 114: {fileID: 636393279}
   m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
@@ -10514,6 +10651,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
+--- !u!114 &636393279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445500, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 636393271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc382828f7382ea45af36ba651308e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  amount: 1
+--- !u!114 &636393280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445518, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 636393271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f896eff6d96f8724dbf64a487d0d4ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: []
+  outputs: []
+  cycleTime: 1
+  online: 0
+  stockpile: {fileID: 0}
 --- !u!1 &640920833
 GameObject:
   m_ObjectHideFlags: 0
@@ -11261,7 +11429,7 @@ GameObject:
   - 135: {fileID: 667050334}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13212,7 +13380,7 @@ Transform:
   - {fileID: 1781218783}
   - {fileID: 968954015}
   - {fileID: 1069778860}
-  - {fileID: 984605887}
+  - {fileID: 1321501980}
   - {fileID: 1983122035}
   - {fileID: 1821249483}
   - {fileID: 1163625878}
@@ -13220,6 +13388,7 @@ Transform:
   - {fileID: 879504681}
   - {fileID: 1432349014}
   - {fileID: 131943614}
+  - {fileID: 984605887}
   m_Father: {fileID: 1373368310}
   m_RootOrder: 0
 --- !u!114 &765278969
@@ -13234,7 +13403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f04bfab7fc720146821527afa8ec9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceOfDisablePercent: 10
+  chanceOfDisablePercent: 0
 --- !u!1 &772334979
 GameObject:
   m_ObjectHideFlags: 0
@@ -14246,7 +14415,7 @@ GameObject:
   - 135: {fileID: 836305616}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14779,7 +14948,7 @@ GameObject:
   - 135: {fileID: 856387932}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15203,7 +15372,7 @@ GameObject:
   - 135: {fileID: 880800076}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15215,7 +15384,7 @@ Transform:
   m_PrefabInternal: {fileID: 1164327282}
   m_GameObject: {fileID: 880800074}
   m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: 0, y: 0, z: 57.7999992}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1167457043}
@@ -16541,12 +16710,12 @@ Transform:
   m_PrefabInternal: {fileID: 1164327282}
   m_GameObject: {fileID: 984605886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 373, y: -.140000001, z: -118.360001}
-  m_LocalScale: {x: .0299999993, y: .0250000004, z: .0350000001}
+  m_LocalPosition: {x: 372.320007, y: .00999999978, z: -131.570007}
+  m_LocalScale: {x: .0300000012, y: .0250000004, z: .0350000001}
   m_Children:
   - {fileID: 2092970472}
   m_Father: {fileID: 765278968}
-  m_RootOrder: 6
+  m_RootOrder: 14
 --- !u!1 &986071198
 GameObject:
   m_ObjectHideFlags: 0
@@ -16788,6 +16957,8 @@ GameObject:
   - 114: {fileID: 993619511}
   - 65: {fileID: 993619510}
   - 54: {fileID: 993619516}
+  - 114: {fileID: 993619518}
+  - 114: {fileID: 993619517}
   m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
@@ -16912,6 +17083,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
+--- !u!114 &993619517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445498, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 993619509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc382828f7382ea45af36ba651308e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  amount: 1
+--- !u!114 &993619518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445516, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 993619509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f896eff6d96f8724dbf64a487d0d4ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: []
+  outputs: []
+  cycleTime: 1
+  online: 0
+  stockpile: {fileID: 0}
 --- !u!1 &997641577
 GameObject:
   m_ObjectHideFlags: 0
@@ -17371,6 +17573,8 @@ GameObject:
   - 114: {fileID: 1048828183}
   - 65: {fileID: 1048828182}
   - 54: {fileID: 1048828187}
+  - 114: {fileID: 1048828189}
+  - 114: {fileID: 1048828188}
   m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
@@ -17495,6 +17699,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
+--- !u!114 &1048828188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445496, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 1048828180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc382828f7382ea45af36ba651308e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  amount: 1
+--- !u!114 &1048828189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445514, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 1048828180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f896eff6d96f8724dbf64a487d0d4ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: []
+  outputs: []
+  cycleTime: 1
+  online: 0
+  stockpile: {fileID: 0}
 --- !u!1 &1050574815
 GameObject:
   m_ObjectHideFlags: 0
@@ -18886,7 +19121,7 @@ GameObject:
   - 135: {fileID: 1155214956}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19196,7 +19431,7 @@ Transform:
   m_PrefabInternal: {fileID: 1164327282}
   m_GameObject: {fileID: 1167457042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 373.209991, y: 0, z: -99.25}
+  m_LocalPosition: {x: 371.299988, y: 0, z: -95.5500031}
   m_LocalScale: {x: .0299999993, y: .0250000004, z: .0350000001}
   m_Children:
   - {fileID: 880800075}
@@ -19749,7 +19984,7 @@ GameObject:
   - 135: {fileID: 1232639836}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19821,7 +20056,7 @@ GameObject:
   - 135: {fileID: 1248973976}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20592,6 +20827,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 914924634}
   m_GameObject: {fileID: 1306578005}
   m_Mesh: {fileID: 4300094, guid: 29f42584c1f8b0a48ba99f965bace9db, type: 3}
+--- !u!1 &1321501979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 155730, guid: 3a08b76e7552b44cca3accf5c1802c29, type: 2}
+  m_PrefabInternal: {fileID: 1164327282}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1321501980}
+  m_Layer: 0
+  m_Name: Mining-Ore
+  m_TagString: Mining-Ore
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1321501980
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 455730, guid: 3a08b76e7552b44cca3accf5c1802c29, type: 2}
+  m_PrefabInternal: {fileID: 1164327282}
+  m_GameObject: {fileID: 1321501979}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 373, y: -.140000001, z: -118.360001}
+  m_LocalScale: {x: .0299999993, y: .0250000004, z: .0350000001}
+  m_Children:
+  - {fileID: 2066605760}
+  m_Father: {fileID: 765278968}
+  m_RootOrder: 6
 --- !u!1 &1322551800
 GameObject:
   m_ObjectHideFlags: 0
@@ -20817,7 +21080,7 @@ GameObject:
   - 135: {fileID: 1340985947}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20889,7 +21152,7 @@ GameObject:
   - 135: {fileID: 1342745006}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21947,7 +22210,7 @@ GameObject:
   - 135: {fileID: 1403894321}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23098,7 +23361,7 @@ GameObject:
   - 135: {fileID: 1452875758}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23265,6 +23528,8 @@ GameObject:
   - 114: {fileID: 1458289594}
   - 65: {fileID: 1458289593}
   - 54: {fileID: 1458289598}
+  - 114: {fileID: 1458289600}
+  - 114: {fileID: 1458289599}
   m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
@@ -23389,6 +23654,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
+--- !u!114 &1458289599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445502, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 1458289591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc382828f7382ea45af36ba651308e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  amount: 1
+--- !u!114 &1458289600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445520, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 1458289591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f896eff6d96f8724dbf64a487d0d4ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: []
+  outputs: []
+  cycleTime: 1
+  online: 0
+  stockpile: {fileID: 0}
 --- !u!1 &1466188568
 GameObject:
   m_ObjectHideFlags: 0
@@ -25697,7 +25993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f04bfab7fc720146821527afa8ec9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceOfDisablePercent: 30
+  chanceOfDisablePercent: 0
 --- !u!1 &1603271317
 GameObject:
   m_ObjectHideFlags: 0
@@ -26033,7 +26329,7 @@ GameObject:
   - 135: {fileID: 1620990285}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26332,7 +26628,7 @@ GameObject:
   - 135: {fileID: 1638319488}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27037,6 +27333,8 @@ GameObject:
   - 114: {fileID: 1686642046}
   - 65: {fileID: 1686642045}
   - 54: {fileID: 1686642050}
+  - 114: {fileID: 1686642052}
+  - 114: {fileID: 1686642051}
   m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
@@ -27161,6 +27459,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
+--- !u!114 &1686642051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445508, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 1686642043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc382828f7382ea45af36ba651308e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  amount: 1
+--- !u!114 &1686642052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445526, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 1686642043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f896eff6d96f8724dbf64a487d0d4ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: []
+  outputs: []
+  cycleTime: 1
+  online: 0
+  stockpile: {fileID: 0}
 --- !u!1 &1686922040
 GameObject:
   m_ObjectHideFlags: 0
@@ -27765,7 +28094,7 @@ GameObject:
   - 135: {fileID: 1735637781}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28116,7 +28445,7 @@ GameObject:
   - 135: {fileID: 1743045545}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28308,7 +28637,7 @@ GameObject:
   - 135: {fileID: 1749134967}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30229,7 +30558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f04bfab7fc720146821527afa8ec9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceOfDisablePercent: 10
+  chanceOfDisablePercent: 0
 --- !u!1 &1852541161
 GameObject:
   m_ObjectHideFlags: 0
@@ -30917,7 +31246,7 @@ Transform:
   m_PrefabInternal: {fileID: 1164327282}
   m_GameObject: {fileID: 1889648270}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 363.160004, y: .074000001, z: -119.849998}
+  m_LocalPosition: {x: 363.160004, y: .0700000003, z: -140.429993}
   m_LocalScale: {x: .0299999993, y: .0250000004, z: .0350000001}
   m_Children:
   - {fileID: 1230857047}
@@ -31074,6 +31403,8 @@ GameObject:
   - 114: {fileID: 1906395023}
   - 65: {fileID: 1906395024}
   - 54: {fileID: 1906395025}
+  - 114: {fileID: 1906395027}
+  - 114: {fileID: 1906395026}
   m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
@@ -31198,6 +31529,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
+--- !u!114 &1906395026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445506, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 1906395018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc382828f7382ea45af36ba651308e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  amount: 1
+--- !u!114 &1906395027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11445524, guid: a3187c7382852454092a60ddcfdc3469,
+    type: 2}
+  m_PrefabInternal: {fileID: 280577007}
+  m_GameObject: {fileID: 1906395018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f896eff6d96f8724dbf64a487d0d4ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: []
+  outputs: []
+  cycleTime: 1
+  online: 0
+  stockpile: {fileID: 0}
 --- !u!1 &1907719641
 GameObject:
   m_ObjectHideFlags: 0
@@ -32075,7 +32437,7 @@ GameObject:
   - 135: {fileID: 1966738721}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33581,6 +33943,78 @@ Transform:
   - {fileID: 531582658}
   m_Father: {fileID: 1599933401}
   m_RootOrder: 2
+--- !u!1 &2066605759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 155728, guid: 3a08b76e7552b44cca3accf5c1802c29, type: 2}
+  m_PrefabInternal: {fileID: 1164327282}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2066605760}
+  - 33: {fileID: 2066605763}
+  - 23: {fileID: 2066605762}
+  - 135: {fileID: 2066605761}
+  m_Layer: 0
+  m_Name: Model
+  m_TagString: Mining-Ore
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2066605760
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 455728, guid: 3a08b76e7552b44cca3accf5c1802c29, type: 2}
+  m_PrefabInternal: {fileID: 1164327282}
+  m_GameObject: {fileID: 2066605759}
+  m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1321501980}
+  m_RootOrder: 0
+--- !u!135 &2066605761
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13555730, guid: 3a08b76e7552b44cca3accf5c1802c29,
+    type: 2}
+  m_PrefabInternal: {fileID: 1164327282}
+  m_GameObject: {fileID: 2066605759}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 9.49877453
+  m_Center: {x: .221012115, y: -.25885731, z: -.205950782}
+--- !u!23 &2066605762
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2355730, guid: 3a08b76e7552b44cca3accf5c1802c29,
+    type: 2}
+  m_PrefabInternal: {fileID: 1164327282}
+  m_GameObject: {fileID: 2066605759}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 6190a97d21de88e4eb40b25b71649fc0, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &2066605763
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3355730, guid: 3a08b76e7552b44cca3accf5c1802c29,
+    type: 2}
+  m_PrefabInternal: {fileID: 1164327282}
+  m_GameObject: {fileID: 2066605759}
+  m_Mesh: {fileID: 4300110, guid: 29f42584c1f8b0a48ba99f965bace9db, type: 3}
 --- !u!1 &2067437746
 GameObject:
   m_ObjectHideFlags: 0
@@ -33830,7 +34264,7 @@ GameObject:
   - 135: {fileID: 2092970473}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34559,7 +34993,7 @@ GameObject:
   - 135: {fileID: 2143377391}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
