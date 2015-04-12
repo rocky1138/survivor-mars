@@ -294,7 +294,7 @@ GameObject:
   - 135: {fileID: 13504286}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1718,7 +1718,7 @@ GameObject:
   - 135: {fileID: 13504300}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1771,7 +1771,7 @@ GameObject:
   - 135: {fileID: 13504304}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1853,7 +1853,7 @@ GameObject:
   - 135: {fileID: 13504306}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2163,7 +2163,7 @@ GameObject:
   - 135: {fileID: 13504312}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2316,7 +2316,7 @@ GameObject:
   - 135: {fileID: 13504318}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2563,7 +2563,7 @@ GameObject:
   - 135: {fileID: 13504324}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3286,7 +3286,7 @@ GameObject:
   - 135: {fileID: 13535696}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3370,7 +3370,7 @@ GameObject:
   - 135: {fileID: 13535698}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3997,7 +3997,7 @@ GameObject:
   - 135: {fileID: 13535712}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4100,7 +4100,7 @@ GameObject:
   - 135: {fileID: 13535718}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Mining-Ore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
