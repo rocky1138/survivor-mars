@@ -222,6 +222,7 @@
      <Compile Include="Assets\Scripts\OreRandom.cs" />
      <Compile Include="Assets\Scripts\Resource.cs" />
      <Compile Include="Assets\Scripts\ResourceConverter.cs" />
+     <Compile Include="Assets\Scripts\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Stockpile.cs" />
      <Compile Include="Assets\SpawnEntrances.cs" />
      <Compile Include="Assets\rotateLight.cs" />
