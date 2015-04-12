@@ -8,7 +8,7 @@ public class Robot_surfaceMove : MonoBehaviour {
 	public Transform dest;
 	public float jitter = .1f;
 	public bool selected = false;
-
+	int tube;
 	// Use this for initialization
 	void Start () {
 	
@@ -52,7 +52,22 @@ public class Robot_surfaceMove : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log ("Collision with  " + other.tag);
+		//int tube;
+		Debug.Log ("Trigger with  " + other.tag);
+		if (other.tag == "TubeEntrance") {
+				gameObject.transform.GetChild (1).gameObject.SetActive (true);
+				moving = false;
+				if (other.name == "LavaTube1") {
+						tube = 0;
+				}
+				if (other.name == "LavaTube2") {
+						tube = 1;
+				}
+				if (other.name == "LavaTube3") {
+						tube = 2;
+				}
+				GameObject.Find ("GameController").GetComponent<GameController> ().EnterTube (tube, gameObject);
+		}
 	}
 
 }

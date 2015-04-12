@@ -394,7 +394,7 @@ GameObject:
   - 114: {fileID: 11475494}
   - 65: {fileID: 6575494}
   - 54: {fileID: 5440874}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   - 114: {fileID: 11475496}
   - 65: {fileID: 6575496}
   - 54: {fileID: 5440872}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   - 114: {fileID: 11475500}
   - 65: {fileID: 6575500}
   - 54: {fileID: 5440870}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   - 114: {fileID: 11475502}
   - 65: {fileID: 6575502}
   - 54: {fileID: 5440868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   - 45: {fileID: 4575514}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: PIP
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -567,7 +567,7 @@ GameObject:
   - 114: {fileID: 11475504}
   - 65: {fileID: 6575504}
   - 54: {fileID: 5440866}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
   m_Icon: {fileID: 0}
@@ -588,7 +588,7 @@ GameObject:
   - 114: {fileID: 11475506}
   - 65: {fileID: 6575506}
   - 54: {fileID: 5440864}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ GameObject:
   - 45: {fileID: 4575518}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: PIP
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -682,7 +682,7 @@ GameObject:
   - 45: {fileID: 4575520}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: PIP
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -702,7 +702,7 @@ GameObject:
   - 45: {fileID: 4575522}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: PIP
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -721,7 +721,7 @@ GameObject:
   - 114: {fileID: 11475508}
   - 65: {fileID: 6575508}
   - 54: {fileID: 5440862}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
   m_Icon: {fileID: 0}
@@ -743,7 +743,7 @@ GameObject:
   - 45: {fileID: 4575524}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: PIP
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -793,7 +793,7 @@ GameObject:
   - 114: {fileID: 11475510}
   - 65: {fileID: 6575510}
   - 54: {fileID: 5440860}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
   m_Icon: {fileID: 0}
@@ -815,7 +815,7 @@ GameObject:
   - 45: {fileID: 4575526}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: PIP
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -835,7 +835,7 @@ GameObject:
   - 45: {fileID: 4575528}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: PIP
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -887,7 +887,7 @@ GameObject:
   - 45: {fileID: 4575530}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: PIP
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -907,7 +907,7 @@ GameObject:
   - 45: {fileID: 4575532}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: PIP
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -926,7 +926,7 @@ GameObject:
   - 114: {fileID: 11475512}
   - 65: {fileID: 6575512}
   - 54: {fileID: 5440858}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RobotMiner_surface
   m_TagString: Robot_surface
   m_Icon: {fileID: 0}
@@ -3060,7 +3060,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!54 &5440858
 Rigidbody:
@@ -3075,7 +3075,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!54 &5440860
 Rigidbody:
@@ -3090,7 +3090,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!54 &5440862
 Rigidbody:
@@ -3105,7 +3105,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!54 &5440864
 Rigidbody:
@@ -3120,7 +3120,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!54 &5440866
 Rigidbody:
@@ -3135,7 +3135,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!54 &5440868
 Rigidbody:
@@ -3150,7 +3150,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!54 &5440870
 Rigidbody:
@@ -3165,7 +3165,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!54 &5440872
 Rigidbody:
@@ -3180,7 +3180,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!54 &5440874
 Rigidbody:
@@ -3195,7 +3195,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!65 &6575494
 BoxCollider:

@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour {
 	public GameObject oldRobot = null;
 	public GameObject[] Robots;
 	public GameObject[] RobotButtons;
+	public GameObject[] SpawnPoints;
 
 	// Use this for initialization
 	void Start () {
@@ -74,6 +75,13 @@ public class GameController : MonoBehaviour {
 
 			}
 		}
+	}
+
+	public void EnterTube(int tube, GameObject robot){
+	
+			robot.transform.position = SpawnPoints[tube].transform.position;
+
+
 	}
 
 	public void SelectRobot (int num){
