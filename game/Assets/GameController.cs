@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour {
 						//	}
 
 						}
-						if (hitInfo.collider.tag == "TubeEntrance" || hitInfo.collider.tag == "CaveFloor" || hitInfo.collider.tag == "Building")	{
+				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false)	{
 							Debug.Log(currentRobot);
 							if (currentRobot != null) {
 								currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
@@ -62,6 +62,18 @@ public class GameController : MonoBehaviour {
 							//moving = true;
 							//dest = hitInfo.collider.transform;
 						}
+					if (hitInfo.collider.tag == "CaveFloor")	{
+						Debug.Log(currentRobot);
+						if (currentRobot != null) {
+							currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
+							currentRobot.GetComponent<Robot_surfaceMove>().moving = true;
+						}
+						else {
+							DeselectRobot();
+						}
+						//moving = true;
+						//dest = hitInfo.collider.transform;
+					}
 						if (hitInfo.collider.tag == "GamePlane" )	{
 							//oldRobot = currentRobot;
 							DeselectRobot();
