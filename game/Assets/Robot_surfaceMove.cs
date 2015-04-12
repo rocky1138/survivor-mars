@@ -28,6 +28,7 @@ public class Robot_surfaceMove : MonoBehaviour {
 								//	transform.position += temp; 
 		}
 
+
 	/*	if (Input.GetMouseButton (0)) {
 			moving = false;
 			RaycastHit hitInfo = new RaycastHit ();
@@ -45,4 +46,13 @@ public class Robot_surfaceMove : MonoBehaviour {
 			}
 		}*/
 	}
+
+	void OnCollisionEnter(Collision other) {
+		Debug.Log ("Collision with  " + other.gameObject.tag);
+	}
+
+	void OnTriggerEnter(Collider other) {
+		Debug.Log ("Collision with  " + other.tag);
+	}
+
 }
