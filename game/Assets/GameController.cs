@@ -24,8 +24,11 @@ public class GameController : MonoBehaviour {
 	}
 	
 	void Update () {
+		
 		if (Input.GetMouseButton (0) && !EventSystem.current.IsPointerOverGameObject()) {
+			
 			RaycastHit hitInfo = new RaycastHit ();
+			
 			if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hitInfo)) {
 
 				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
@@ -35,72 +38,56 @@ public class GameController : MonoBehaviour {
 				
 				Debug.Log (hitInfo.collider.tag);
 
+				if (hitInfo.collider.tag == "Robot_surface")	{
 
-						//Debug.Log("XYZ" + hitInfo.transform.position);
-						if (hitInfo.collider.tag == "Robot_surface")	{
-
-							if (hitInfo.collider.gameObject != currentRobot && currentRobot != null){
-								DeselectRobot();
-							}
-										currentRobot = hitInfo.transform.gameObject;
-										//DUPLICATE CODE DUE TO LAZINESS SEE FUNCTION BELOW
-										if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
-											CamToggleButton.SetActive(true);
-											currentRobot.transform.GetChild(1).gameObject.SetActive(true);
-										}
-										currentRobot.transform.GetChild(3).gameObject.SetActive(true);
-										//moving = true;
-										//dest = hitInfo.collider.transform;
-							//}
-						//	else {
-						//		DeselectRobot();
-						//	}
-
-						}
-				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false)	{
-						//Debug.Log(currentRobot);
-						if (currentRobot != null) {
-							//currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
-							currentRobot.GetComponent<Robot_surfaceMove>().target = hitInfo.point;
-							currentRobot.GetComponent<Robot_surfaceMove>().moving = true;
-						}
-						else {
-							DeselectRobot();
-						}
-						//moving = true;
-						//dest = hitInfo.collider.transform;
+					if (hitInfo.collider.gameObject != currentRobot && currentRobot != null){
+						DeselectRobot();
 					}
 					
-					if (hitInfo.collider.tag == "CaveFloor")	{
-						//Debug.Log(currentRobot);
-						if (currentRobot != null) {
-							//currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
-							currentRobot.GetComponent<Robot_surfaceMove>().target = hitInfo.point;
-							currentRobot.GetComponent<Robot_surfaceMove>().moving = true;
-						}
-						else {
-							DeselectRobot();
-						}
-						//moving = true;
-						//dest = hitInfo.collider.transform;
-						
-					} else if (hitInfo.collider.tag == "Mining-Ore") {
-						
-					}
+					currentRobot = hitInfo.transform.gameObject;
 					
-					if (hitInfo.collider.tag == "GamePlane" )	{
-							//oldRobot = currentRobot;
-							//Debug.Log ("GUI  " + !EventSystem.current.IsPointerOverGameObject());
-							DeselectRobot();
-
-							
-						//		if (currentRobot != null){
-						//currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.point;
-						//			currentRobot.GetComponent<Robot_surfaceMove>().moving = false;
-						//		}
-						//moving = true;
-						//dest = hitInfo.collider.transform;
+					// DUPLICATE CODE DUE TO LAZINESS SEE FUNCTION BELOW
+					if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
+						CamToggleButton.SetActive(true);
+						currentRobot.transform.GetChild(1).gameObject.SetActive(true);
 					}
+					currentRobot.transform.GetChild(3).gameObject.SetActive(true);
+				}
+				
+				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false) {
+
+					if (currentRobot != null) {
+						//currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
+						currentRobot.GetComponent<Robot_surfaceMove>().target = hitInfo.point;
+						currentRobot.GetComponent<Robot_surfaceMove>().moving = true;
+					}
+					else {
+						DeselectRobot();
+					}
+				}
+					
+				if (hitInfo.collider.tag == "CaveFloor")	{
+
+					if (currentRobot != null) {
+						//currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
+						currentRobot.GetComponent<Robot_surfaceMove>().target = hitInfo.point;
+						currentRobot.GetComponent<Robot_surfaceMove>().moving = true;
+					}
+					else {
+						DeselectRobot();
+					}
+					//moving = true;
+					//dest = hitInfo.collider.transform;
+					
+				} else if (hitInfo.collider.tag == "Mining-Ore") {
+					if (currentRobot != null) {
+						currentRobot.GetComponent<ResourceConverter>().online = true;
+					}
+				}
+				
+				if (hitInfo.collider.tag == "GamePlane" )	{
+						DeselectRobot();
+				}
 			}
 		}
 	}

@@ -4,7 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MarsEndeavour {
+
   public class Stockpile : MonoBehaviour {
     public Dictionary<ResourceType, int> stocks;
     public Dictionary<ResourceType, int> maxima;
@@ -57,4 +57,4 @@ namespace MarsEndeavour {
       return newStock;
     }
   }
-}
+

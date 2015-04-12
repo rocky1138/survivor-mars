@@ -1,0 +1,3 @@
+
+  class ResourceInput : Resource {
+  }

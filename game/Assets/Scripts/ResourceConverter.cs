@@ -3,10 +3,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MarsEndeavour {
-  class ResourceConverter : MonoBehaviour {
-    public Input[] inputs;
-    public Output[] outputs;
+
+class ResourceConverter : MonoBehaviour {
+    public ResourceInput[] inputs;
+    public ResourceOutput[] outputs;
     public int cycleTime;
     private float progress;
     private bool ready;
@@ -24,21 +24,21 @@ namespace MarsEndeavour {
       if (!stockpile) {
         stockpile = GameObject.Find("/Stockpile").GetComponent<Stockpile>();
       }
-      inputs = GetComponents<Input>();
-      outputs = GetComponents<Output>();
+      inputs = GetComponents<ResourceInput>();
+      outputs = GetComponents<ResourceOutput>();
     }
 
     void Update() {
       if (!online) return;
       if (!ready) {
         ready = true;
-        foreach(Input input in inputs) {
+        foreach(ResourceInput input in inputs) {
           if (stockpile.stocks[input.type] < input.amount) {
             ready = false;
           }
         }
         if (ready) {
-          foreach(Input input in inputs) {
+          foreach(ResourceInput input in inputs) {
             stockpile.updateStockLevel(input, true);
           }
         }
@@ -48,11 +48,11 @@ namespace MarsEndeavour {
           ready = false;
           progress = 0;
 
-          foreach(Output output in outputs) {
+          foreach(ResourceOutput output in outputs) {
             stockpile.updateStockLevel(output);
           }
         }
       }
     }
   }
-}
+

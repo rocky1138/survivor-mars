@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MarsEndeavour {
+
   public enum ResourceType {
     /*Food, BioWaste, H2O, WasteWater,*/ O2, CO2, /*H2, Power,*/ Ore, Metal, Silicates, Ice
   }
@@ -24,5 +24,4 @@ namespace MarsEndeavour {
     public ResourceType type;
     public int amount;
   }
-}
 

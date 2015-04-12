@@ -2,6 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/**
+ * Randomly disables ore in an attempt to make the game more replayable.
+ * Each time you play, the cave is different!
+ */
 public class OreRandom : MonoBehaviour {
 
 	public int chanceOfDisablePercent = 10;
