@@ -8,7 +8,10 @@ using System.Collections.Generic;
   public class Stockpile : MonoBehaviour {
     public Dictionary<ResourceType, int> stocks;
     public Dictionary<ResourceType, int> maxima;
-    public Text allStocks;
+    public Text O2Stock;
+    public Text CO2Stock;
+    public Text OreStock;
+    public Text IceStock;
 
     Stockpile() {
       stocks = new Dictionary<ResourceType, int>();
@@ -37,11 +40,10 @@ using System.Collections.Generic;
     }
 
     void Update() {
-      string stockString = "";
-      foreach (ResourceType value in Enum.GetValues(typeof(ResourceType))) {
-        stockString += " " + Resource.niceNames[value] + ":" + stocks[value];
-      }
-      allStocks.text = stockString;
+      O2Stock.text = ": " + stocks[ResourceType.O2];
+      CO2Stock.text = ": " + stocks[ResourceType.CO2];
+      OreStock.text = ": " + stocks[ResourceType.Ore];
+      IceStock.text = ": " + stocks[ResourceType.Ice];
     }
 
     public int updateStockLevel(Resource delta, bool decrease=false) {
