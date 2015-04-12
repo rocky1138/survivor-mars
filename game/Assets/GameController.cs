@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 	public GameObject currentRobot = null;
 	public GameObject oldRobot = null;
 	public GameObject[] Robots;
 	public GameObject[] RobotButtons;
+	public GameObject[] SpawnPoints;
+	public GameObject CamToggleButton;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +24,7 @@ public class GameController : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (Input.GetMouseButton (0)) {
+		if (Input.GetMouseButton (0) && !EventSystem.current.IsPointerOverGameObject()) {
 			RaycastHit hitInfo = new RaycastHit ();
 			if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hitInfo)) {
 				//print (hitInfo.transform.tag);
@@ -37,6 +41,11 @@ public class GameController : MonoBehaviour {
 								DeselectRobot();
 							}
 										currentRobot = hitInfo.transform.gameObject;
+										//DUPLICATE CODE DUE TO LAZINESS SEE FUNCTION BELOW
+										if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
+											CamToggleButton.SetActive(true);
+											currentRobot.transform.GetChild(1).gameObject.SetActive(true);
+										}
 										currentRobot.transform.GetChild(3).gameObject.SetActive(true);
 										//moving = true;
 										//dest = hitInfo.collider.transform;
@@ -46,7 +55,7 @@ public class GameController : MonoBehaviour {
 						//	}
 
 						}
-						if (hitInfo.collider.tag == "TubeEntrance" || hitInfo.collider.tag == "CaveFloor" || hitInfo.collider.tag == "Building")	{
+				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false)	{
 							Debug.Log(currentRobot);
 							if (currentRobot != null) {
 								currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
@@ -58,8 +67,21 @@ public class GameController : MonoBehaviour {
 							//moving = true;
 							//dest = hitInfo.collider.transform;
 						}
+					if (hitInfo.collider.tag == "CaveFloor")	{
+						Debug.Log(currentRobot);
+						if (currentRobot != null) {
+							currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
+							currentRobot.GetComponent<Robot_surfaceMove>().moving = true;
+						}
+						else {
+							DeselectRobot();
+						}
+						//moving = true;
+						//dest = hitInfo.collider.transform;
+					}
 						if (hitInfo.collider.tag == "GamePlane" )	{
 							//oldRobot = currentRobot;
+							//Debug.Log ("GUI  " + !EventSystem.current.IsPointerOverGameObject());
 							DeselectRobot();
 
 							
@@ -76,14 +98,34 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	public void EnterTube(int tube, GameObject robot){
+			CamToggleButton.SetActive(true);
+			robot.transform.position = SpawnPoints[tube].transform.position;
+
+
+	}
+
 	public void SelectRobot (int num){
+		DeselectRobot ();
 		currentRobot = Robots[num];
+		if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
+			CamToggleButton.SetActive(true);
+			currentRobot.transform.GetChild(1).gameObject.SetActive(true);
+		}
+		currentRobot.transform.GetChild(3).gameObject.SetActive(true);
 	}
 
 	public void DeselectRobot(){
 		if (currentRobot != null) {
+						currentRobot.transform.GetChild (1).gameObject.SetActive (false);
+						currentRobot.transform.GetChild (2).gameObject.SetActive (false);
 						currentRobot.transform.GetChild (3).gameObject.SetActive (false);
 						currentRobot = null;
 				}
+	}
+
+	public void CamToggler(){
+		Debug.Log ("CamToggler");
+
 	}
 }
