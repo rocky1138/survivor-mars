@@ -12,6 +12,7 @@ TagManager:
   - Building
   - GamePlane
   - CaveFloor
+  - MainCamera_Bak
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

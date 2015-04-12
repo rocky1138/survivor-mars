@@ -907,9 +907,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: .300000012
-    height: .300000012
+    y: .74000001
+    width: .25
+    height: .25
   near clip plane: .300000012
   far clip plane: 1000
   field of view: 51
@@ -1735,7 +1735,7 @@ BoxCollider:
   m_GameObject: {fileID: 148514}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1759,7 +1759,7 @@ BoxCollider:
   m_GameObject: {fileID: 198554}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
