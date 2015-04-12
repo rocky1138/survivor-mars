@@ -12,7 +12,9 @@ public class GameController : MonoBehaviour {
 		for(int i = 0; i < Robots.Length; i++)
 		{
 			if (Robots[i].gameObject.activeSelf == false){
-				RobotButtons[i].SetActive(false);
+				if (i < RobotButtons.Length && RobotButtons[i] != null) {
+					RobotButtons[i].SetActive(false);
+				}
 			}
 		}
 	}
@@ -45,6 +47,7 @@ public class GameController : MonoBehaviour {
 
 						}
 						if (hitInfo.collider.tag == "TubeEntrance" || hitInfo.collider.tag == "CaveFloor" || hitInfo.collider.tag == "Building")	{
+							Debug.Log(currentRobot);
 							if (currentRobot != null) {
 								currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
 								currentRobot.GetComponent<Robot_surfaceMove>().moving = true;

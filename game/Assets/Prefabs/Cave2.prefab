@@ -1641,6 +1641,7 @@ GameObject:
   - 4: {fileID: 484116}
   - 33: {fileID: 3384114}
   - 23: {fileID: 2384114}
+  - 64: {fileID: 6428750}
   m_Layer: 0
   m_Name: Caves_U_floor
   m_TagString: CaveFloor
@@ -4471,6 +4472,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184124}
   m_Mesh: {fileID: 4300002, guid: 84c2796037a5c4d42b32140724a48ba8, type: 3}
+--- !u!64 &6428750
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184116}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300004, guid: 84c2796037a5c4d42b32140724a48ba8, type: 3}
 --- !u!95 &9507316
 Animator:
   serializedVersion: 3
