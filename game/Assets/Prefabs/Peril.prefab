@@ -50,7 +50,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &159098
 GameObject:
   m_ObjectHideFlags: 1
@@ -5986,6 +5986,7 @@ MonoBehaviour:
   likelihood: .0500000007
   dustStorm: {fileID: 146354}
   asteroid: {fileID: 159096}
+  warning: {fileID: 0}
 --- !u!114 &11446354
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,6 +5,7 @@ public class Peril : MonoBehaviour {
 	public float likelihood = 0.1f;
 	public GameObject dustStorm;
 	public GameObject asteroid;
+	public AudioClip warning;
 
 	// Use this for initialization
 	void Start () {
@@ -18,10 +19,13 @@ public class Peril : MonoBehaviour {
 			if (peril == 0 && !dustStorm.activeSelf) {
 				Debug.Log("Duststorm begins!");
 				dustStorm.SetActive(true);
+				audio.PlayOneShot(warning);
 			}
-			if (peril == 0 && !asteroid.activeSelf) {
+			if (peril == 1 && !dustStorm.activeSelf) {
 				Debug.Log("Asteroid begins!");
-				asteroid.SetActive(true);
+				//asteroid.SetActive(true);
+				audio.PlayOneShot(warning);
+				Instantiate(asteroid);
 			}
 		}
 	}
