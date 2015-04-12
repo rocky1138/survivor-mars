@@ -11,6 +11,11 @@ public class GameController : MonoBehaviour {
 	public GameObject[] SpawnPoints;
 	public GameObject CamToggleButton;
 
+	public Camera Surface;
+	public Camera Surface_PIP;
+	public bool CamToggleState = false;
+	Camera currentRobotCam;
+
 	// Use this for initialization
 	void Start () {
 		for(int i = 0; i < Robots.Length; i++)
@@ -29,6 +34,11 @@ public class GameController : MonoBehaviour {
 			if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hitInfo)) {
 
 				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+
+
+
+
+
 				Physics.Raycast (ray, out hitInfo, Mathf.Infinity);
 				
 				Debug.DrawLine (ray.origin, hitInfo.point);
@@ -133,6 +143,19 @@ public class GameController : MonoBehaviour {
 
 	public void CamToggler(){
 		Debug.Log ("CamToggler");
+		CamToggleState = !CamToggleState;
+		if (CamToggleState == true) {
+				currentRobot.transform.GetChild (2).gameObject.SetActive (true);
+				Surface_PIP.gameObject.SetActive(true);
+				Surface.tag = "MainCamera_Bak";
+				Surface.camera.enabled = false;
+				//currentRobot.transform.GetChild (2).tag = "MainCamera";
+		} else {
+				currentRobot.transform.GetChild (2).gameObject.SetActive (false);
+				Surface_PIP.gameObject.SetActive(false);
+				Surface.tag = "MainCamera";
+				Surface.camera.enabled = true;
+		}
 
 	}
 }
