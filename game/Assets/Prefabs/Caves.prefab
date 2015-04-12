@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2304170}
   m_Layer: 0
   m_Name: Caves_X1_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -557,7 +557,7 @@ GameObject:
   - 23: {fileID: 2304198}
   m_Layer: 0
   m_Name: Caves_L2_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -606,7 +606,7 @@ GameObject:
   - 23: {fileID: 2304200}
   m_Layer: 0
   m_Name: Caves_X1_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -639,7 +639,7 @@ GameObject:
   - 23: {fileID: 2304202}
   m_Layer: 0
   m_Name: Caves_E_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -769,7 +769,7 @@ GameObject:
   - 23: {fileID: 2304210}
   m_Layer: 0
   m_Name: Caves_U_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -786,7 +786,7 @@ GameObject:
   - 23: {fileID: 2304212}
   m_Layer: 0
   m_Name: Caves_X1_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -803,7 +803,7 @@ GameObject:
   - 23: {fileID: 2304214}
   m_Layer: 0
   m_Name: Caves_E_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -852,7 +852,7 @@ GameObject:
   - 23: {fileID: 2304218}
   m_Layer: 0
   m_Name: Caves_I_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -901,7 +901,7 @@ GameObject:
   - 23: {fileID: 2304222}
   m_Layer: 0
   m_Name: Caves_L2_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -934,7 +934,7 @@ GameObject:
   - 64: {fileID: 6404324}
   m_Layer: 0
   m_Name: Caves_U_floor
-  m_TagString: Cave Floor
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -1048,7 +1048,7 @@ GameObject:
   - 23: {fileID: 2304230}
   m_Layer: 0
   m_Name: Caves_L2_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -1065,7 +1065,7 @@ GameObject:
   - 23: {fileID: 2304232}
   m_Layer: 0
   m_Name: Caves_X1_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -1100,7 +1100,7 @@ GameObject:
   - 23: {fileID: 2304236}
   m_Layer: 0
   m_Name: Caves_U_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -1148,7 +1148,7 @@ GameObject:
   - 23: {fileID: 2304238}
   m_Layer: 0
   m_Name: Caves_X2_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -1165,7 +1165,7 @@ GameObject:
   - 23: {fileID: 2304240}
   m_Layer: 0
   m_Name: Caves_I_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -1312,7 +1312,7 @@ GameObject:
   - 23: {fileID: 2304248}
   m_Layer: 0
   m_Name: Caves_L2_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -1439,7 +1439,7 @@ GameObject:
   - 23: {fileID: 2304250}
   m_Layer: 0
   m_Name: Caves_L_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -1456,7 +1456,7 @@ GameObject:
   - 23: {fileID: 2304252}
   m_Layer: 0
   m_Name: Caves_U_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -1473,7 +1473,7 @@ GameObject:
   - 23: {fileID: 2304254}
   m_Layer: 0
   m_Name: Caves_U_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -1537,7 +1537,7 @@ GameObject:
   - 23: {fileID: 2304258}
   m_Layer: 0
   m_Name: Caves_L2_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2196,7 +2196,7 @@ GameObject:
   - 23: {fileID: 2304296}
   m_Layer: 0
   m_Name: Caves_U_wall
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2351,7 +2351,7 @@ GameObject:
   - 23: {fileID: 2304310}
   m_Layer: 0
   m_Name: Caves_L2_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2580,7 +2580,7 @@ GameObject:
   - 23: {fileID: 2304318}
   m_Layer: 0
   m_Name: Caves_U_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2646,7 +2646,7 @@ GameObject:
   - 23: {fileID: 2304322}
   m_Layer: 0
   m_Name: Caves_I_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2840,7 +2840,7 @@ GameObject:
   - 23: {fileID: 2335698}
   m_Layer: 0
   m_Name: Caves_L_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2857,7 +2857,7 @@ GameObject:
   - 23: {fileID: 2335700}
   m_Layer: 0
   m_Name: Caves_L_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2874,7 +2874,7 @@ GameObject:
   - 23: {fileID: 2335702}
   m_Layer: 0
   m_Name: Caves_I_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3022,7 +3022,7 @@ GameObject:
   - 23: {fileID: 2335710}
   m_Layer: 0
   m_Name: Caves_L2_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3087,7 +3087,7 @@ GameObject:
   - 23: {fileID: 2335714}
   m_Layer: 0
   m_Name: Caves_X2_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3119,7 +3119,7 @@ GameObject:
   - 23: {fileID: 2335716}
   m_Layer: 0
   m_Name: Caves_I_floor
-  m_TagString: Cave Floor
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3136,7 +3136,7 @@ GameObject:
   - 23: {fileID: 2335718}
   m_Layer: 0
   m_Name: Caves_I_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3201,7 +3201,7 @@ GameObject:
   - 23: {fileID: 2335722}
   m_Layer: 0
   m_Name: Caves_I_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3218,7 +3218,7 @@ GameObject:
   - 23: {fileID: 2335724}
   m_Layer: 0
   m_Name: Caves_U_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3335,7 +3335,7 @@ GameObject:
   - 23: {fileID: 2335730}
   m_Layer: 0
   m_Name: Caves_L2_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3352,7 +3352,7 @@ GameObject:
   - 23: {fileID: 2335732}
   m_Layer: 0
   m_Name: Caves_U_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3387,7 +3387,7 @@ GameObject:
   - 23: {fileID: 2335736}
   m_Layer: 0
   m_Name: Caves_U_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3437,7 +3437,7 @@ GameObject:
   - 23: {fileID: 2335740}
   m_Layer: 0
   m_Name: Caves_E_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3537,7 +3537,7 @@ GameObject:
   - 23: {fileID: 2335746}
   m_Layer: 0
   m_Name: Caves_I_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3570,7 +3570,7 @@ GameObject:
   - 23: {fileID: 2335748}
   m_Layer: 0
   m_Name: Caves_L2_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3636,7 +3636,7 @@ GameObject:
   - 23: {fileID: 2335752}
   m_Layer: 0
   m_Name: Caves_L2_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3751,7 +3751,7 @@ GameObject:
   - 23: {fileID: 2335760}
   m_Layer: 0
   m_Name: Caves_I_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -3834,7 +3834,7 @@ GameObject:
   - 23: {fileID: 2335764}
   m_Layer: 0
   m_Name: Caves_U_floor
-  m_TagString: Untagged
+  m_TagString: CaveFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
