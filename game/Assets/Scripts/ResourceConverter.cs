@@ -5,49 +5,51 @@ using System.Collections.Generic;
 
 namespace MarsEndeavour {
   class ResourceConverter : MonoBehaviour {
-    public Dictionary<ResourceType, int> inputs;
-    public Dictionary<ResourceType, int> outputs;
+    public Input[] inputs;
+    public Output[] outputs;
     public int cycleTime;
     private float progress;
     private bool ready;
+    public bool online;
 
     public Stockpile stockpile;
 
-    ResourceConverter(Dictionary<ResourceType, int> inputs, Dictionary<ResourceType, int> outputs, int cycleTime) {
-      this.inputs = inputs;
-      this.outputs = outputs;
+    ResourceConverter(int cycleTime) {
       this.cycleTime = cycleTime;
       this.progress = 0;
       this.ready = false;
     }
 
     void Start() {
-      stockpile = GameObject.Find("/ResourceController").GetComponent<Stockpile>();
+      if (!stockpile) {
+        stockpile = GameObject.Find("/Stockpile").GetComponent<Stockpile>();
+      }
+      inputs = GetComponents<Input>();
+      outputs = GetComponents<Output>();
     }
 
     void Update() {
-      // check that stockpile has enough inputs
+      if (!online) return;
       if (!ready) {
         ready = true;
-        foreach(KeyValuePair<ResourceType, int> entry in inputs) {
-          if (stockpile.stocks[entry.Key] < inputs[entry.Key]) {
+        foreach(Input input in inputs) {
+          if (stockpile.stocks[input.type] < input.amount) {
             ready = false;
           }
         }
         if (ready) {
-          foreach(KeyValuePair<ResourceType, int> entry in inputs) {
-            stockpile.updateStockLevel(entry);
+          foreach(Input input in inputs) {
+            stockpile.updateStockLevel(input, true);
           }
         }
-
       } else {
         progress += Time.deltaTime;
         if (progress > cycleTime) {
           ready = false;
           progress = 0;
 
-          foreach(KeyValuePair<ResourceType, int> entry in outputs) {
-            stockpile.updateStockLevel(entry);
+          foreach(Output output in outputs) {
+            stockpile.updateStockLevel(output);
           }
         }
       }

@@ -22,15 +22,14 @@ namespace MarsEndeavour {
 
     // Use this for initialization
     void Start () {
-    //  allStocks = new Text("");
-      initializeResource(ResourceType.Food, 1000, 1000);
-      initializeResource(ResourceType.BioWaste, 0, 100);
-      initializeResource(ResourceType.H2O, 250, 250);
-      initializeResource(ResourceType.WasteWater, 0, 150);
+      //initializeResource(ResourceType.Food, 1000, 1000);
+      //initializeResource(ResourceType.BioWaste, 0, 100);
+      //initializeResource(ResourceType.H2O, 250, 250);
+      //initializeResource(ResourceType.WasteWater, 0, 150);
       initializeResource(ResourceType.O2, 200, 200);
       initializeResource(ResourceType.CO2, 0, 200);
-      initializeResource(ResourceType.H2, 0, 500);
-      initializeResource(ResourceType.Power, 1500, 1500);
+      //initializeResource(ResourceType.H2, 0, 500);
+      //initializeResource(ResourceType.Power, 1500, 1500);
       initializeResource(ResourceType.Ore, 0, 200);
       initializeResource(ResourceType.Metal, 0, 100);
       initializeResource(ResourceType.Silicates, 0, 100);
@@ -40,19 +39,18 @@ namespace MarsEndeavour {
     void Update() {
       string stockString = "";
       foreach (ResourceType value in Enum.GetValues(typeof(ResourceType))) {
-        Debug.Log("this" + value);
         stockString += " " + Resource.niceNames[value] + ":" + stocks[value];
       }
       allStocks.text = stockString;
     }
 
-    public int updateStockLevel(KeyValuePair<ResourceType, int> delta) {
-      int newStock = stocks[delta.Key] + delta.Value;
+    public int updateStockLevel(Resource delta, bool decrease=false) {
+      int newStock = stocks[delta.type] + ((decrease ? -1 : 1) * delta.amount);
       if (newStock >= 0) {
-        if (newStock <= maxima[delta.Key]) {
-          stocks[delta.Key] = newStock;
+        if (newStock <= maxima[delta.type]) {
+          stocks[delta.type] = newStock;
         } else {
-          stocks[delta.Key] = maxima[delta.Key];
+          stocks[delta.type] = maxima[delta.type];
         }
       }
 
