@@ -5,35 +5,35 @@ public class Robot_surfaceMove : MonoBehaviour {
 	public float moveSpeed = 2.0f; // Units per second
 	public float speed = 5;
 	public bool moving = false;
-	//public Transform dest;
 	public Vector3 target;
 	public float jitter = .1f;
 	public bool selected = false;
 	public bool inTube = false;
+	private AudioSource movement = null;
 	int tube;
+
 	// Use this for initialization
 	void Start () {
-	
+		movement = gameObject.AddComponent<AudioSource> ();
+		movement.clip = Resources.Load ("Assets/Sounds/Robot/95119__robinhood76__01636-robotics-move.wav") as AudioClip;
 	}
 
 	// Update is called once per frame
 	void Update () {
 
-		//if (moving == true && transform.position != dest.position) {
-			
 		if (moving == true && transform.position != target) {
-			
-			//transform.LookAt(dest);
-			transform.LookAt(target);
-			
 			float step = speed * Time.deltaTime;
-			
-			//transform.position = Vector3.MoveTowards (transform.position, dest.position, step);
+
+			transform.LookAt(target);
 			transform.position = Vector3.MoveTowards (transform.position, target, step);
 								//	jitter = jitter * -1;
 								//	Vector3 temp = new Vector3(0,jitter,0);
 								//	Debug.Log ("Jitter:" + jitter);
 								//	transform.position += temp; 
+
+			if (!movement.isPlaying) {
+				movement.Play();
+			}
 		}
 	}
 
