@@ -17,7 +17,7 @@ https://2015.spaceappschallenge.org/project/the-mars-endeavour/
 Team
 -----------
 * Rich Bettridge
-* Brook Wayne
+* Brooke Wayne
 * Hannele Kormano
 * Mike Hoyle
 * Angelina Lapteva
