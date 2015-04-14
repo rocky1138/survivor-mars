@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -697.103027, y: 130.657135, z: -276.341492}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39,7 +39,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e293fe3ba531d60459e9566ff965331a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allStocks: {fileID: 0}
+  O2Stock: {fileID: 0}
+  CO2Stock: {fileID: 0}
+  OreStock: {fileID: 0}
+  IceStock: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

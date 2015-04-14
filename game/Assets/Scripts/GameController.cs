@@ -33,9 +33,8 @@ public class GameController : MonoBehaviour {
 		lineRenderer.SetWidth(.3f,.1f);
 		lineRenderer.SetVertexCount(2);
 
-		for(int i = 0; i < Robots.Length; i++)
-		{
-			if (Robots[i].gameObject.activeSelf == false){
+		for(int i = 0; i < Robots.Length; i++) {
+			if (Robots[i] != null && Robots[i].gameObject.activeSelf == false) {
 				if (i < RobotButtons.Length && RobotButtons[i] != null) {
 					RobotButtons[i].SetActive(false);
 				}
