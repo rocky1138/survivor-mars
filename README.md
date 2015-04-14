@@ -16,12 +16,14 @@ https://2015.spaceappschallenge.org/project/the-mars-endeavour/
 
 Team
 -----------
-Rich Bettridge
-Brook Wayne
-Hannele Kormano
-Mike Hoyle
-Angelina Lapteva
-Wyatt Carss
+* Rich Bettridge
+* Brook Wayne
+* Hannele Kormano
+* Mike Hoyle
+* Angelina Lapteva
+* Wyatt Carss
+* John Rockefeller
+* The survivors and robots on Mars
 
 Licenses
 -----------
