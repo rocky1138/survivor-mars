@@ -6,6 +6,9 @@ Ten astronauts land on Mars with ten robots, limited supplies and fuel. Their mi
 Gameplay
 -----------
 An isometric 2.5d real-time strategy game where players must mine for water and ore, farm for food, and seek shelter in lava tubes from dust storms and other perils of living on Mars.
+Platforms
+-----------
+Linux, Mac, Windows, Android, BlackBerry, and Windows Phone.
 
 Website
 -----------
