@@ -31,24 +31,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &185576
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 485576}
-  - 33: {fileID: 3385574}
-  - 64: {fileID: 6485574}
-  - 23: {fileID: 2385574}
-  m_Layer: 0
-  m_Name: GamePlane
-  m_TagString: GamePlane
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &185578
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,8 +64,8 @@ GameObject:
   - 95: {fileID: 9585574}
   - 64: {fileID: 6485576}
   m_Layer: 0
-  m_Name: MarsEnv
-  m_TagString: Untagged
+  m_Name: MarsSurface
+  m_TagString: GamePlane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -426,21 +408,8 @@ Transform:
   - {fileID: 485578}
   - {fileID: 485580}
   - {fileID: 421112}
-  - {fileID: 485576}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!4 &485576
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185576}
-  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 45, z: 0}
-  m_LocalScale: {x: 600, y: 600, z: 600}
-  m_Children: []
-  m_Father: {fileID: 485574}
-  m_RootOrder: 4
 --- !u!4 &485578
 Transform:
   m_ObjectHideFlags: 1
@@ -448,7 +417,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185578}
   m_LocalRotation: {x: -.465315133, y: .421695769, z: -.268649846, w: -.730398357}
-  m_LocalPosition: {x: 243.899994, y: 584.599976, z: -292.089996}
+  m_LocalPosition: {x: 243.899994, y: 500, z: -292.089996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 485574}
@@ -461,7 +430,7 @@ Transform:
   m_GameObject: {fileID: 185580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1000, y: 250, z: 1000}
+  m_LocalScale: {x: 800, y: 1, z: 800}
   m_Children: []
   m_Father: {fileID: 485574}
   m_RootOrder: 2
@@ -745,26 +714,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
---- !u!23 &2385574
-Renderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185576}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!23 &2385576
 Renderer:
   m_ObjectHideFlags: 1
@@ -1025,13 +974,6 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3385574
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185576}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3385576
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1139,19 +1081,6 @@ Skybox:
   m_GameObject: {fileID: 185582}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: b1023eebca4b0ff4eb87a670539744ab, type: 2}
---- !u!64 &6485574
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185576}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!64 &6485576
 MeshCollider:
   m_ObjectHideFlags: 1

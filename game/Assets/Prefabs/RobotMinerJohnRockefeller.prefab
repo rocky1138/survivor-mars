@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &105984
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,7 +41,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &105986
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,8 +103,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 60, y: 60, z: 60}
+  m_LocalPosition: {x: 0, y: 0, z: -553.5}
+  m_LocalScale: {x: 200, y: 200, z: 200}
   m_Children:
   - {fileID: 405988}
   - {fileID: 405986}
@@ -118,8 +118,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105984}
-  m_LocalRotation: {x: .226006091, y: .670015872, z: -.226006091, w: .670015872}
-  m_LocalPosition: {x: -.400000006, y: .400000006, z: 0}
+  m_LocalRotation: {x: .566190481, y: 0, z: 0, w: .824274421}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: .0111111095, y: .0111111095, z: .0111111104}
   m_Children: []
   m_Father: {fileID: 405982}
@@ -404,12 +404,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  speed: 10
+  speed: 25
   moving: 0
   target: {x: 0, y: 0, z: 0}
   jitter: .400000006
   selected: 0
-  inTube: 1
 --- !u!114 &11405984
 MonoBehaviour:
   m_ObjectHideFlags: 1

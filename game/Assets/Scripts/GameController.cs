@@ -67,18 +67,20 @@ public class GameController : MonoBehaviour {
 					currentRobot = hitInfo.transform.gameObject;
 					
 					// DUPLICATE CODE DUE TO LAZINESS SEE FUNCTION BELOW
-					if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
+					/*
+					if (currentRobot.GetComponent<RobotMiner>().inTube == true){
 						CamToggleButton.SetActive(true);
 						currentRobot.transform.GetChild(1).gameObject.SetActive(true);
 					}
+					*/
 					currentRobot.transform.GetChild(3).gameObject.SetActive(true);
 				}
 				
-				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false) {
+				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building")) {
 
 					if (currentRobot != null) {
-						currentRobot.GetComponent<Robot_surfaceMove>().target = hitInfo.point;
-						currentRobot.GetComponent<Robot_surfaceMove>().moving = true;
+						currentRobot.GetComponent<RobotMiner>().target = hitInfo.point;
+						currentRobot.GetComponent<RobotMiner>().moving = true;
 					}
 					else {
 						DeselectRobot();
@@ -88,8 +90,8 @@ public class GameController : MonoBehaviour {
 				if (hitInfo.collider.tag == "CaveFloor")	{
 
 					if (currentRobot != null) {
-						currentRobot.GetComponent<Robot_surfaceMove>().target = hitInfo.point;
-						currentRobot.GetComponent<Robot_surfaceMove>().moving = true;
+						currentRobot.GetComponent<RobotMiner>().target = hitInfo.point;
+						currentRobot.GetComponent<RobotMiner>().moving = true;
 					}
 					else {
 						DeselectRobot();
@@ -109,7 +111,14 @@ public class GameController : MonoBehaviour {
 				}
 				
 				if (hitInfo.collider.tag == "GamePlane" )	{
+					if (currentRobot != null) {
+						currentRobot.GetComponent<RobotMiner>().target = hitInfo.point;
+						currentRobot.GetComponent<RobotMiner>().moving = true;
+					}
+					else {
 						DeselectRobot();
+					}
+					//	DeselectRobot();
 				}
 			}
 		}
@@ -123,10 +132,12 @@ public class GameController : MonoBehaviour {
 	public void SelectRobot (int num) {
 		DeselectRobot ();
 		currentRobot = Robots[num];
-		if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
+		/*
+		if (currentRobot.GetComponent<RobotMiner>().inTube == true){
 			CamToggleButton.SetActive(true);
 			currentRobot.transform.GetChild(1).gameObject.SetActive(true);
 		}
+		*/
 		currentRobot.transform.GetChild(3).gameObject.SetActive(true);
 	}
 

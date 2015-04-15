@@ -227,7 +227,7 @@
      <Compile Include="Assets\Scripts\ResourceConverter.cs" />
      <Compile Include="Assets\Scripts\ResourceInput.cs" />
      <Compile Include="Assets\Scripts\ResourceOutput.cs" />
-     <Compile Include="Assets\Scripts\Robot_surfaceMove.cs" />
+     <Compile Include="Assets\Scripts\RobotMiner.cs" />
      <Compile Include="Assets\Scripts\SpawnEntrances.cs" />
      <Compile Include="Assets\Scripts\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Stockpile.cs" />
