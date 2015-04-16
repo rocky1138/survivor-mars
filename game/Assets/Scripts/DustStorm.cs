@@ -7,7 +7,7 @@ public class DustStorm : MonoBehaviour {
 	float finish;
 
 	// Use this for initialization
-	void OnEnable () {
+	void Start () {
 		Debug.LogError("Starting Dust Storm..............");
 		start = Time.time;
 		finish = Time.time + duration;

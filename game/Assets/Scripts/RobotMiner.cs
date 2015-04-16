@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Robot_surfaceMove : MonoBehaviour {
+public class RobotMiner : MonoBehaviour {
+	
 	public float moveSpeed = 2.0f; // Units per second
 	public float speed = 5;
 	public bool moving = false;
 	public Vector3 target;
 	public float jitter = .1f;
 	public bool selected = false;
-	public bool inTube = false;
 	private AudioSource movement = null;
 	int tube;
 
@@ -46,7 +46,6 @@ public class Robot_surfaceMove : MonoBehaviour {
 		Debug.Log ("Trigger with  " + other.tag);
 		
 		if (other.tag == "TubeEntrance") {
-				inTube = true;
 				gameObject.transform.GetChild (1).gameObject.SetActive (true);
 				moving = false;
 				if (other.name == "LavaTube1") {
