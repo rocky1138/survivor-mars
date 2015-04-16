@@ -6485,16 +6485,16 @@ MonoBehaviour:
   currentRobot: {fileID: 0}
   oldRobot: {fileID: 0}
   Robots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2060349779}
+  - {fileID: 682135638}
+  - {fileID: 1833587476}
+  - {fileID: 2009154922}
+  - {fileID: 483946492}
+  - {fileID: 173178923}
+  - {fileID: 1845687747}
+  - {fileID: 1514951554}
+  - {fileID: 1183183611}
+  - {fileID: 414742391}
   RobotButtons:
   - {fileID: 206349981}
   - {fileID: 1596044342}
@@ -8517,43 +8517,43 @@ Prefab:
     - target: {fileID: 11449370, guid: 2470b18c9f6b24329bbb580e5a1b5062, type: 2}
       propertyPath: Robots.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2060349779}
     - target: {fileID: 11449370, guid: 2470b18c9f6b24329bbb580e5a1b5062, type: 2}
       propertyPath: Robots.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 682135638}
     - target: {fileID: 11449370, guid: 2470b18c9f6b24329bbb580e5a1b5062, type: 2}
       propertyPath: Robots.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1833587476}
     - target: {fileID: 11449370, guid: 2470b18c9f6b24329bbb580e5a1b5062, type: 2}
       propertyPath: Robots.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2009154922}
     - target: {fileID: 11449370, guid: 2470b18c9f6b24329bbb580e5a1b5062, type: 2}
       propertyPath: Robots.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 483946492}
     - target: {fileID: 11449370, guid: 2470b18c9f6b24329bbb580e5a1b5062, type: 2}
       propertyPath: Robots.Array.data[5]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 173178923}
     - target: {fileID: 11449370, guid: 2470b18c9f6b24329bbb580e5a1b5062, type: 2}
       propertyPath: Robots.Array.data[6]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1845687747}
     - target: {fileID: 11449370, guid: 2470b18c9f6b24329bbb580e5a1b5062, type: 2}
       propertyPath: Robots.Array.data[7]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1514951554}
     - target: {fileID: 11449370, guid: 2470b18c9f6b24329bbb580e5a1b5062, type: 2}
       propertyPath: Robots.Array.data[8]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1183183611}
     - target: {fileID: 11449370, guid: 2470b18c9f6b24329bbb580e5a1b5062, type: 2}
       propertyPath: Robots.Array.data[9]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 414742391}
     - target: {fileID: 11449370, guid: 2470b18c9f6b24329bbb580e5a1b5062, type: 2}
       propertyPath: RobotButtons.Array.data[0]
       value: 
