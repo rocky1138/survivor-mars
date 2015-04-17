@@ -125,7 +125,10 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void EnterTube(int tube, GameObject robot) {
+		
 		CamToggleButton.SetActive(true);
+		
+		// Move the bot to the start point in the tube.
 		robot.transform.position = SpawnPoints[tube].transform.position;
 	}
 
@@ -152,6 +155,8 @@ public class GameController : MonoBehaviour {
 
 	public void CamToggler() {
 		
+		Debug.Log("Swapping cameras.");
+		
 		CamToggleState = !CamToggleState;
 		
 		if (CamToggleState == true) {
@@ -169,10 +174,8 @@ public class GameController : MonoBehaviour {
 
 	}
 
-	IEnumerator laser_die(){
-		yield return new WaitForSeconds(5f);
+	IEnumerator laser_die() {
+		yield return new WaitForSeconds(5.0f);
 		lineRenderer.enabled = false;
-		
 	}
-
 }
