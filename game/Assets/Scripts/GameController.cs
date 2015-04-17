@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour {
 	
 	void Update () {
 		
-		if (Input.GetMouseButton (0) && !EventSystem.current.IsPointerOverGameObject()) {
+		if (Input.GetMouseButtonDown (0) && !EventSystem.current.IsPointerOverGameObject()) {
 			
 			RaycastHit hitInfo = new RaycastHit ();
 			
