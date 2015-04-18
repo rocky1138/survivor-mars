@@ -47,6 +47,9 @@ public class GameController : MonoBehaviour {
 					RobotButtons[i].SetActive(false);
 				}
 			}
+			else {
+				Robots[i].transform.transform.GetChild (4).gameObject.GetComponent<TextMesh>().text = (i+1).ToString();
+			}
 		}
 	}
 	
@@ -76,17 +79,11 @@ public class GameController : MonoBehaviour {
 						DeselectRobot();
 					}
 					
-					currentRobot = hitInfo.transform.gameObject;
-					
-					// DUPLICATE CODE DUE TO LAZINESS SEE FUNCTION BELOW
-					if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
-						CamToggleButton.SetActive(true);
-						currentRobot.transform.GetChild(1).gameObject.SetActive(true);
-					}
-					currentRobot.transform.GetChild(3).gameObject.SetActive(true);
+			
+					SwitchRobot(hitInfo.transform.gameObject);
 				}
 				
-				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false) {
+				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false && currentRobot != null) {
 
 					if (currentRobot != null) {
 						//currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
@@ -101,7 +98,7 @@ public class GameController : MonoBehaviour {
 					
 				if (hitInfo.collider.tag == "CaveFloor")	{
 
-					if (currentRobot != null) {
+					if (currentRobot != null && currentRobot.GetComponent<Robot_surfaceMove>().inTube == true) {
 						//currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
 						Instantiate(click, hitInfo.point, Quaternion.identity);
 						currentRobot.GetComponent<Robot_surfaceMove>().target = hitInfo.point;
@@ -147,42 +144,85 @@ public class GameController : MonoBehaviour {
 
 	}
 
-	public void SelectRobot (int num){
+
+
+
+
+
+
+	public void SelectRobot (int num){ //legacy but didnt want to rename, wrapper for UI
+		SwitchRobot (Robots[num]);
+	}
+
+	public void SwitchRobot(GameObject newRobot){
 		DeselectRobot ();
-		currentRobot = Robots[num];
-		if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
-			CamToggleButton.SetActive(true);
-			currentRobot.transform.GetChild(1).gameObject.SetActive(true);
+		currentRobot = newRobot;
+		if (currentRobot != null) {
+			currentRobot.transform.GetChild (3).gameObject.SetActive (true);				//Turn ON Object Highlighter
+
+			if (currentRobot.GetComponent<Robot_surfaceMove> ().inTube == true) {			//If IN Tube
+					CamToggleButton.SetActive (true);										//Activate Camera Button
+					currentRobot.transform.GetChild (1).gameObject.SetActive (true);		//Turn on PIP
+			}
 		}
-		currentRobot.transform.GetChild(3).gameObject.SetActive(true);
 	}
 
 	public void DeselectRobot(){
 		if (currentRobot != null) {
-						currentRobot.transform.GetChild (1).gameObject.SetActive (false);
-						currentRobot.transform.GetChild (2).gameObject.SetActive (false);
-						currentRobot.transform.GetChild (3).gameObject.SetActive (false);
-						currentRobot = null;
-				}
+
+			//if (currentRobot.GetComponent<Robot_surfaceMove> ().inTube == true) {			//If IN Tube
+				CamReset();
+			//}
+
+				currentRobot.transform.GetChild (1).gameObject.SetActive (false); 	//Turn off PIP
+				//currentRobot.transform.GetChild (2).gameObject.SetActive (false); //Turn off Fullscreen Cam
+				currentRobot.transform.GetChild (3).gameObject.SetActive (false); 	//Turn off Object Highlighter
+				currentRobot = null;											  	//Unset current robot
+				//CamToggleButton.SetActive(false);
+		}
 	}
+
+
 
 	public void CamToggler(){
 		Debug.Log ("CamToggler");
-		CamToggleState = !CamToggleState;
-		if (CamToggleState == true) {
-				currentRobot.transform.GetChild (2).gameObject.SetActive (true);
-				Surface_PIP.gameObject.SetActive(true);
-				Surface.tag = "MainCamera_Bak";
-				Surface.camera.enabled = false;
+		//CamToggleState = !CamToggleState;
+		//CamToggleState True = above ground False = Below ground
+		//CameraState: 
+		// 0 = Above Ground
+		// 1 = Below Ground
+
+
+
+		//if (CamToggleState == true ) {
+		if (Surface.tag == "MainCamera"){
+		//if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true) {
+				currentRobot.transform.GetChild (2).gameObject.SetActive (true);	//Turn ON fullscreen Robot Cam
+				Surface_PIP.gameObject.SetActive(true);								//Turn ON Surface PIP Cam
+				Surface.tag = "MainCamera_Bak";                                     //Unassign Main Cam
+				Surface.camera.enabled = false;                                     //Turn OFF Main Cam
 				//currentRobot.transform.GetChild (2).tag = "MainCamera";
-		} else {
-				currentRobot.transform.GetChild (2).gameObject.SetActive (false);
-				Surface_PIP.gameObject.SetActive(false);
-				Surface.tag = "MainCamera";
-				Surface.camera.enabled = true;
+		} 
+
+
+		//else if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == false){
+		else { 
+				currentRobot.transform.GetChild (2).gameObject.SetActive (false);	//Turn off Fullscreen Robot Cam
+				Surface_PIP.gameObject.SetActive(false);							//Turn off Surface PIP
+				Surface.tag = "MainCamera";											//Retag main camer
+				Surface.camera.enabled = true;										//Enabled surface camera
 		}
 
 	}
+
+	public void CamReset(){
+		currentRobot.transform.GetChild (2).gameObject.SetActive (false);	//Turn off Fullscreen Robot Cam
+		Surface_PIP.gameObject.SetActive(false);							//Turn off Surface PIP
+		Surface.tag = "MainCamera";											//Retag main camer
+		Surface.camera.enabled = true;										//Enabled surface camera
+	}
+
+
 
 	IEnumerator laser_die(){
 		yield return new WaitForSeconds(5f);
