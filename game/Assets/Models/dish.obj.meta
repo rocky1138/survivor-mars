@@ -1,0 +1,107 @@
+fileFormatVersion: 2
+guid: b3d33d11dcccb4e5fa37f44cf7268052
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: clamppost_default
+    100002: //RootNode
+    100004: dishframe_default
+    100006: lgnut_default
+    100008: longbolt_default
+    100010: mesh_default
+    100012: shortbolt_default
+    100014: smllnut_default
+    100016: tiltrod_bracket_default
+    100018: tiltrod_default
+    400000: clamppost_default
+    400002: //RootNode
+    400004: dishframe_default
+    400006: lgnut_default
+    400008: longbolt_default
+    400010: mesh_default
+    400012: shortbolt_default
+    400014: smllnut_default
+    400016: tiltrod_bracket_default
+    400018: tiltrod_default
+    2300000: clamppost_default
+    2300002: dishframe_default
+    2300004: lgnut_default
+    2300006: longbolt_default
+    2300008: mesh_default
+    2300010: shortbolt_default
+    2300012: smllnut_default
+    2300014: tiltrod_bracket_default
+    2300016: tiltrod_default
+    3300000: clamppost_default
+    3300002: dishframe_default
+    3300004: lgnut_default
+    3300006: longbolt_default
+    3300008: mesh_default
+    3300010: shortbolt_default
+    3300012: smllnut_default
+    3300014: tiltrod_bracket_default
+    3300016: tiltrod_default
+    4300000: clamppost_default
+    4300002: dishframe_default
+    4300004: lgnut_default
+    4300006: longbolt_default
+    4300008: mesh_default
+    4300010: shortbolt_default
+    4300012: smllnut_default
+    4300014: tiltrod_bracket_default
+    4300016: tiltrod_default
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
