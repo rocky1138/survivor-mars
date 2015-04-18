@@ -213,9 +213,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Population 10/10
-
-'
+  m_Text: Martian Days
 --- !u!114 &11498218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -574,7 +572,7 @@ RectTransform:
   m_RootOrder: 9
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: -212.999939, y: -51.7999268}
+  m_AnchoredPosition: {x: 72.25, y: -43}
   m_SizeDelta: {x: 1673.23999, y: 107.110062}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22498218
