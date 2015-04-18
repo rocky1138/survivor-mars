@@ -11,6 +11,7 @@ class ResourceConverter : MonoBehaviour {
     private float progress;
     private bool ready;
     public bool online;
+    public float efficiency = 1;
 
     public Stockpile stockpile;
 
@@ -44,7 +45,8 @@ class ResourceConverter : MonoBehaviour {
         }
         if (ready) {
           foreach(ResourceInput input in inputs) {
-            stockpile.updateStockLevel(input, true);
+            stockpile.updateStockLevel(
+              new ResourceAmount(input.type, input.amount), true);
           }
         }
       } else {
@@ -54,7 +56,8 @@ class ResourceConverter : MonoBehaviour {
           progress = 0;
 
           foreach(ResourceOutput output in outputs) {
-            stockpile.updateStockLevel(output);
+            int delta = (int) Math.Floor((float)output.amount * efficiency);
+            stockpile.updateStockLevel(new ResourceAmount(output.type, delta));
           }
         }
       }

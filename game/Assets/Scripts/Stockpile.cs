@@ -46,7 +46,7 @@ using System.Collections.Generic;
       IceStock.text = ": " + stocks[ResourceType.Ice];
     }
 
-    public int updateStockLevel(Resource delta, bool decrease=false) {
+    public int updateStockLevel(ResourceAmount delta, bool decrease=false) {
       int newStock = stocks[delta.type] + ((decrease ? -1 : 1) * delta.amount);
       if (newStock >= 0) {
         if (newStock <= maxima[delta.type]) {

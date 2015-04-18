@@ -7,6 +7,17 @@ using System.Collections.Generic;
 public enum ResourceType {
   /*Food, BioWaste, H2O, WasteWater,*/ O2, CO2, /*H2, Power,*/ Ore, Metal, Silicates, Ice
 }
+
+public class ResourceAmount {
+  public ResourceType type;
+  public int amount;
+  public ResourceAmount(ResourceType t, int a) {
+    type = t;
+    amount = a;
+  }
+}
+
+
 public class Resource : MonoBehaviour {
   public static Dictionary<ResourceType, string> niceNames = new Dictionary<ResourceType, string> {
     //{ResourceType.Food, "Food"},
