@@ -7,7 +7,7 @@ using System.Collections.Generic;
 class ResourceConverter : MonoBehaviour {
     public ResourceInput[] inputs;
     public ResourceOutput[] outputs;
-    public int cycleTime;
+    public float cycleTime;
     private float progress;
     private bool ready;
     public bool online;
@@ -50,14 +50,13 @@ class ResourceConverter : MonoBehaviour {
           }
         }
       } else {
-        progress += Time.deltaTime;
+        progress += efficiency * Time.deltaTime;
         if (progress > cycleTime) {
           ready = false;
           progress = 0;
 
           foreach(ResourceOutput output in outputs) {
-            int delta = (int) Math.Floor((float)output.amount * efficiency);
-            stockpile.updateStockLevel(new ResourceAmount(output.type, delta));
+            stockpile.updateStockLevel(new ResourceAmount(output.type, output.amount));
           }
         }
       }
