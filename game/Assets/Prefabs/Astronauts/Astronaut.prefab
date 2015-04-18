@@ -97,8 +97,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputs: []
   outputs: []
-  cycleTime: 5
+  cycleTime: 6
   online: 1
+  efficiency: 1
   stockpile: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
