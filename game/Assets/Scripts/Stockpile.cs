@@ -10,6 +10,7 @@ using System.Collections.Generic;
     public Dictionary<ResourceType, int> maxima;
     public Text O2Stock;
     public Text CO2Stock;
+    public Text PowerStock;
     public Text OreStock;
     public Text IceStock;
 
@@ -32,7 +33,7 @@ using System.Collections.Generic;
       initializeResource(ResourceType.O2, 200, 200);
       initializeResource(ResourceType.CO2, 0, 200);
       //initializeResource(ResourceType.H2, 0, 500);
-      //initializeResource(ResourceType.Power, 1500, 1500);
+      initializeResource(ResourceType.Power, 1500, 1500);
       initializeResource(ResourceType.Ore, 0, 200);
       initializeResource(ResourceType.Metal, 0, 100);
       initializeResource(ResourceType.Silicates, 0, 100);
@@ -42,6 +43,7 @@ using System.Collections.Generic;
     void Update() {
       O2Stock.text = ":" + stocks[ResourceType.O2];
       CO2Stock.text = ":" + stocks[ResourceType.CO2];
+      PowerStock.text = ":" + stocks[ResourceType.Power];
       OreStock.text = ":" + stocks[ResourceType.Ore];
       IceStock.text = ":" + stocks[ResourceType.Ice];
     }

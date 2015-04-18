@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   O2Stock: {fileID: 0}
   CO2Stock: {fileID: 0}
+  PowerStock: {fileID: 0}
   OreStock: {fileID: 0}
   IceStock: {fileID: 0}
 --- !u!1001 &100100000

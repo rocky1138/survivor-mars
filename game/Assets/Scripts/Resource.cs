@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 
 public enum ResourceType {
-  /*Food, BioWaste, H2O, WasteWater,*/ O2, CO2, /*H2, Power,*/ Ore, Metal, Silicates, Ice
+  /*Food, BioWaste, H2O, WasteWater,*/ O2, CO2, /*H2,*/ Power, Ore, Metal, Silicates, Ice
 }
 
 public class ResourceAmount {
@@ -27,7 +27,7 @@ public class Resource : MonoBehaviour {
     {ResourceType.O2, "O2"},
     {ResourceType.CO2, "CO2"},
     //{ResourceType.H2, "H2"},
-    //{ResourceType.Power, "Power"},
+    {ResourceType.Power, "Power"},
     {ResourceType.Ore, "Ore"},
     {ResourceType.Metal, "Metal"},
     {ResourceType.Silicates, "Silicates"},
