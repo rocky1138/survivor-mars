@@ -17,29 +17,23 @@ public class GameController : MonoBehaviour {
 	public bool CamToggleState = false;
 	Camera currentRobotCam;
 
-
+	// How many seconds the user has played the game.
+	private int numSecondsPlayed = 0;
+	public GameObject UiMartianDays;
 
 	Color laserColor1 = new Color(1, 0, 0, 0.5f);
-	Color laserColor2 = new Color(1, .17f, .17f, 0.4f);
 	LineRenderer lineRenderer;
-	//public Transform Laser;
 	public Material laserMat;
 	
-	//public Transform target;
-
-	// Use this for initialization
 	void Start () {
-
 		
-		//Lasers
+		// Lasers
 		lineRenderer = gameObject.AddComponent<LineRenderer>();
-		//lineRenderer.material = new Material (Shader.Find("Particles/Additive"));
 		lineRenderer.material = laserMat;
 		lineRenderer.SetColors(laserColor1, laserColor1);
 		lineRenderer.SetWidth(.3f,.1f);
 		lineRenderer.SetVertexCount(2);
-		//Lasers
-
+		
 		for(int i = 0; i < Robots.Length; i++)
 		{
 			if (Robots[i].gameObject.activeSelf == false){
@@ -48,6 +42,9 @@ public class GameController : MonoBehaviour {
 				}
 			}
 		}
+
+		// Start gameplay timer which tells us how long they've been playing.
+		InvokeRepeating("PlayTimer", 0.0f, 1.0f);
 	}
 	
 	void Update () {
@@ -59,10 +56,6 @@ public class GameController : MonoBehaviour {
 			if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hitInfo)) {
 
 				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-
-
-
-
 
 				Physics.Raycast (ray, out hitInfo, Mathf.Infinity);
 				
@@ -116,12 +109,7 @@ public class GameController : MonoBehaviour {
 				} else if (hitInfo.collider.tag == "Mining-Ore") {
 					if (currentRobot != null) {
 
-
-
 						currentRobot.GetComponent<ResourceConverter>().online = true;
-
-
-
 
 						//Lasers
 						lineRenderer.enabled=true;
@@ -140,14 +128,12 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	public void EnterTube(int tube, GameObject robot){
+	public void EnterTube(int tube, GameObject robot) {
 			CamToggleButton.SetActive(true);
 			robot.transform.position = SpawnPoints[tube].transform.position;
-
-
 	}
 
-	public void SelectRobot (int num){
+	public void SelectRobot (int num) {
 		DeselectRobot ();
 		currentRobot = Robots[num];
 		if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
@@ -157,7 +143,7 @@ public class GameController : MonoBehaviour {
 		currentRobot.transform.GetChild(3).gameObject.SetActive(true);
 	}
 
-	public void DeselectRobot(){
+	public void DeselectRobot() {
 		if (currentRobot != null) {
 						currentRobot.transform.GetChild (1).gameObject.SetActive (false);
 						currentRobot.transform.GetChild (2).gameObject.SetActive (false);
@@ -166,9 +152,12 @@ public class GameController : MonoBehaviour {
 				}
 	}
 
-	public void CamToggler(){
+	public void CamToggler() {
+		
 		Debug.Log ("CamToggler");
+		
 		CamToggleState = !CamToggleState;
+		
 		if (CamToggleState == true) {
 				currentRobot.transform.GetChild (2).gameObject.SetActive (true);
 				Surface_PIP.gameObject.SetActive(true);
@@ -181,13 +170,27 @@ public class GameController : MonoBehaviour {
 				Surface.tag = "MainCamera";
 				Surface.camera.enabled = true;
 		}
-
 	}
 
-	IEnumerator laser_die(){
-		yield return new WaitForSeconds(5f);
+	IEnumerator laser_die() {
+		yield return new WaitForSeconds(5.0f);
 		lineRenderer.enabled = false;
-		
 	}
-
+	
+	///
+	/// Increment number of seconds played.
+	///
+	void PlayTimer() {
+		numSecondsPlayed++;
+		UpdateUiMartianDays();
+	}
+	
+	///
+	/// Show how many days they have been playing.
+	/// In this game, a Martian day lasts 8 real-time minutes.
+	///
+	void UpdateUiMartianDays() {
+		int martianDaysPlayed = (int) Mathf.Floor(numSecondsPlayed / 60 / 8);
+		UiMartianDays.GetComponent<Text>().text = "Martian Days " + martianDaysPlayed.ToString(); 
+	}
 }
