@@ -14,8 +14,13 @@ class ResourceConverter : MonoBehaviour {
 
     public Stockpile stockpile;
 
-    ResourceConverter(int cycleTime) {
+    public ResourceConverter(int cycleTime) {
       this.cycleTime = cycleTime;
+      this.progress = 0;
+      this.ready = false;
+    }
+    public ResourceConverter() {
+       this.cycleTime = 0;
       this.progress = 0;
       this.ready = false;
     }
