@@ -40,10 +40,10 @@ using System.Collections.Generic;
     }
 
     void Update() {
-      O2Stock.text = ": " + stocks[ResourceType.O2];
-      CO2Stock.text = ": " + stocks[ResourceType.CO2];
-      OreStock.text = ": " + stocks[ResourceType.Ore];
-      IceStock.text = ": " + stocks[ResourceType.Ice];
+      O2Stock.text = ":" + stocks[ResourceType.O2];
+      CO2Stock.text = ":" + stocks[ResourceType.CO2];
+      OreStock.text = ":" + stocks[ResourceType.Ore];
+      IceStock.text = ":" + stocks[ResourceType.Ice];
     }
 
     public int updateStockLevel(ResourceAmount delta, bool decrease=false) {
