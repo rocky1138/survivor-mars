@@ -8,6 +8,8 @@ public class Peril : MonoBehaviour {
 	public GameObject asteroid;
 	public AudioClip warning;
 	public GameObject[] targets;
+	public GameObject GameController;
+	int warningNum;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +26,7 @@ public class Peril : MonoBehaviour {
 					Debug.Log("Duststorm begins!");
 					dustStorm.SetActive(true);
 					audio.PlayOneShot(warning);
+					warningNum = 0;
 				}
 				if (peril == 1 && !dustStorm.activeSelf) {
 					Debug.Log("Asteroid begins!");
@@ -33,7 +36,9 @@ public class Peril : MonoBehaviour {
 					Debug.Log("Asteroids");
 					GameObject target = targets[Random.Range(0, targets.Length)];
 					Instantiate(asteroid, new Vector3(target.transform.position.x, target.transform.position.y + 20, target.transform.position.z), transform.rotation);
+					warningNum = 1;
 				}
+			GameController.GetComponent<ToastNotifications>().WarnNotifications(warningNum);
 			}
 	}
 }
