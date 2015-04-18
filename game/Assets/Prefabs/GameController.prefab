@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 449370}
   - 114: {fileID: 11449370}
+  - 114: {fileID: 11476462}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -47,11 +48,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   RobotButtons:
   - {fileID: 0}
   - {fileID: 0}
@@ -67,6 +63,69 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  CamToggleButton: {fileID: 0}
+  click: {fileID: 187924, guid: 4cf5488b41af2453b8a00acac45b7e01, type: 2}
+  Surface: {fileID: 0}
+  Surface_PIP: {fileID: 0}
+  CamToggleState: 0
+  laserMat: {fileID: 0}
+--- !u!114 &11476462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f64edaae8644bb999ff91968a5c9bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Achievements:
+  - {fileID: 21300000, guid: 3120e84694da347fcb7cda2cf8829299, type: 3}
+  - {fileID: 21300000, guid: ab6168c6a510e42b3be8a0bd51a44b43, type: 3}
+  - {fileID: 21300000, guid: bda9a3ac33ea24ac9a35a384c8c0b01a, type: 3}
+  - {fileID: 21300000, guid: 92e863d08d2d044be951f1b37e65aad6, type: 3}
+  - {fileID: 21300000, guid: c88054b5bb3714bbc8e14ce9324c7e85, type: 3}
+  - {fileID: 21300000, guid: a8f0a16e3595c4449b88d68a020e82f2, type: 3}
+  - {fileID: 21300000, guid: 04121cbb8550a4b1ea27768afd89b4cd, type: 3}
+  - {fileID: 21300000, guid: 4e581afc332a647ee9abc611a1bc00d9, type: 3}
+  - {fileID: 21300000, guid: ba8af034f6dd54d3d9d9380c93334c3b, type: 3}
+  - {fileID: 21300000, guid: 0894aee16a7ac452ca32543c2afe54a1, type: 3}
+  - {fileID: 21300000, guid: 23a157879077f435d811ec1fab232533, type: 3}
+  - {fileID: 21300000, guid: 404b4aa112f7948e889ea3b686a15796, type: 3}
+  - {fileID: 21300000, guid: 5aefd3440a8644e9aa608801b1a168c2, type: 3}
+  AchievementsText:
+  - Solar Array Upgraded!
+  - Water Surplus!
+  - Power Surplus!
+  - Algae Farm Upgraded!
+  - Freak Out!
+  - First Explored Tube!
+  - Rockets??
+  - Survived Dust Storm
+  - Survived Earthquake
+  - Survived Disease
+  - Survived Meterite Storm
+  - Survived Tunnel Collapse
+  - 
+  AchievementsValue: e8030000e8030000e8030000e803000018fcffffe8030000e8030000e8030000e8030000e8030000e8030000e8030000e8030000
+  Perils:
+  - {fileID: 21300000, guid: ba8af034f6dd54d3d9d9380c93334c3b, type: 3}
+  - {fileID: 21300000, guid: 0894aee16a7ac452ca32543c2afe54a1, type: 3}
+  - {fileID: 21300000, guid: 23a157879077f435d811ec1fab232533, type: 3}
+  - {fileID: 21300000, guid: 404b4aa112f7948e889ea3b686a15796, type: 3}
+  - {fileID: 21300000, guid: 5aefd3440a8644e9aa608801b1a168c2, type: 3}
+  - {fileID: 21300000, guid: c88054b5bb3714bbc8e14ce9324c7e85, type: 3}
+  PerilsText:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  text: {fileID: 0}
+  image: {fileID: 0}
+  AchievementObject: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
