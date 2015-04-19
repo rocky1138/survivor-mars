@@ -8642,6 +8642,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tech: 1
+  costs: []
+  payable: 0
 --- !u!1 &371700500
 GameObject:
   m_ObjectHideFlags: 0
@@ -35902,6 +35904,7 @@ GameObject:
   - 114: {fileID: 1605620213}
   - 114: {fileID: 1605620216}
   - 114: {fileID: 1605620217}
+  - 114: {fileID: 1605620218}
   m_Layer: 0
   m_Name: Algae
   m_TagString: Untagged
@@ -36024,6 +36027,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tech: 0
+  costs: []
+  payable: 0
 --- !u!114 &1605620217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36055,6 +36060,20 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &1605620218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11408862, guid: 2f5458a0a0255944687178d6098be19a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2090889232}
+  m_GameObject: {fileID: 1605620211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f103a580f87c4dd4b0c04665505b3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 6
+  amount: 25
 --- !u!1 &1613357751
 GameObject:
   m_ObjectHideFlags: 0
@@ -42334,6 +42353,7 @@ GameObject:
   - 114: {fileID: 1849149686}
   - 114: {fileID: 1849149689}
   - 114: {fileID: 1849149690}
+  - 114: {fileID: 1849149691}
   m_Layer: 0
   m_Name: Solar
   m_TagString: Untagged
@@ -42456,6 +42476,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tech: 1
+  costs: []
+  payable: 0
 --- !u!114 &1849149690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42487,6 +42509,20 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &1849149691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11413320, guid: 2f5458a0a0255944687178d6098be19a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2090889232}
+  m_GameObject: {fileID: 1849149684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f103a580f87c4dd4b0c04665505b3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 3
+  amount: 25
 --- !u!1 &1851770792
 GameObject:
   m_ObjectHideFlags: 0

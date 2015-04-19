@@ -14,6 +14,12 @@ using System.Collections.Generic;
     public Text OreStock;
     public Text IceStock;
 
+	public GameObject AlgaeUpgradeButton;
+	public GameObject SolarUpgradeButton;
+	public int AlgaeUpgradeThreshold;
+	public int SolarUpgradeThreshold;
+
+
     Stockpile() {
       stocks = new Dictionary<ResourceType, int>();
       maxima = new Dictionary<ResourceType, int>();
@@ -50,6 +56,18 @@ using System.Collections.Generic;
 
     public int updateStockLevel(ResourceAmount delta, bool decrease=false) {
       int newStock = stocks[delta.type] + ((decrease ? -1 : 1) * delta.amount);
+
+		Debug.Log ("Type   " + delta.type + "     Amount:    " + delta.amount);
+
+		if (delta.type.ToString () == "Ore" && SolarUpgradeThreshold == stocks[delta.type]) {
+			SolarUpgradeButton.SetActive(true);		
+		}
+		
+		if (delta.type.ToString () == "Ice" && SolarUpgradeThreshold == stocks[delta.type]) {
+			SolarUpgradeButton.SetActive(true);		
+		}
+
+
       if (newStock >= 0) {
         if (newStock <= maxima[delta.type]) {
           stocks[delta.type] = newStock;
