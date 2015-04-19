@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public enum TechnologyType {
-  AlgaeFarm, SolarArray, MiningLaser
+  AlgaeFarm, SolarArray, MiningLaser,Settlement
 }
 
 class TechLevel {
@@ -34,6 +34,7 @@ class Technology : MonoBehaviour {
 
   public void Upgrade(TechnologyType tech) {
     techLevels[tech].upgrade();
+		//Debug.Log (tech);
   }
 
   void Start() {

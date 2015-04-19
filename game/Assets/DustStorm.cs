@@ -8,7 +8,7 @@ public class DustStorm : MonoBehaviour {
 
 	// Use this for initialization
 	void OnEnable () {
-		Debug.LogError("Starting Dust Storm..............");
+//		Debug.LogError("Starting Dust Storm..............");
 		start = Time.time;
 		finish = Time.time + duration;
 	}
@@ -17,7 +17,7 @@ public class DustStorm : MonoBehaviour {
 	void Update () {
 		if (Time.time > finish) {
 			gameObject.SetActive(false);
-			Debug.LogError("Duststorm ends!");
+//			Debug.LogError("Duststorm ends!");
 		}
 	}
 }

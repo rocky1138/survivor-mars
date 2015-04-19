@@ -17,28 +17,13 @@ public class GameController : MonoBehaviour {
 	public bool CamToggleState = false;
 	Camera currentRobotCam;
 
-
-
-	Color laserColor1 = new Color(1, 0, 0, 0.5f);
-	Color laserColor2 = new Color(1, .17f, .17f, 0.4f);
-	LineRenderer lineRenderer;
-	//public Transform Laser;
-	public Material laserMat;
-	
 	//public Transform target;
 
 	// Use this for initialization
 	void Start () {
 
 		
-		//Lasers
-		lineRenderer = gameObject.AddComponent<LineRenderer>();
-		//lineRenderer.material = new Material (Shader.Find("Particles/Additive"));
-		lineRenderer.material = laserMat;
-		lineRenderer.SetColors(laserColor1, laserColor1);
-		lineRenderer.SetWidth(.3f,.1f);
-		lineRenderer.SetVertexCount(2);
-		//Lasers
+
 
 		for(int i = 0; i < Robots.Length; i++)
 		{
@@ -78,9 +63,9 @@ public class GameController : MonoBehaviour {
 					if (hitInfo.collider.gameObject != currentRobot && currentRobot != null){
 						DeselectRobot();
 					}
-					
-			
-					SwitchRobot(hitInfo.transform.gameObject);
+					if (hitInfo.collider.gameObject != currentRobot){
+						SwitchRobot(hitInfo.transform.gameObject);
+					}
 				}
 				
 				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false && currentRobot != null) {
@@ -112,20 +97,8 @@ public class GameController : MonoBehaviour {
 					
 				} else if (hitInfo.collider.tag == "Mining-Ore") {
 					if (currentRobot != null) {
-
-
-
+						currentRobot.GetComponent<MineSequence>().Mine(hitInfo.point);
 						currentRobot.GetComponent<ResourceConverter>().online = true;
-
-
-
-
-						//Lasers
-						lineRenderer.enabled=true;
-						//lineRenderer.SetPosition(0, new Vector3(transform.position.x, transform.position.y - 2, transform.position.z));
-						lineRenderer.SetPosition(0, currentRobot.transform.position);
-						lineRenderer.SetPosition(1, hitInfo.point);
-						StartCoroutine(laser_die());
 
 					}
 				}
@@ -140,7 +113,7 @@ public class GameController : MonoBehaviour {
 	public void EnterTube(int tube, GameObject robot){
 			CamToggleButton.SetActive(true);
 			robot.transform.position = SpawnPoints[tube].transform.position;
-
+			SwitchRobot (robot);
 
 	}
 
@@ -224,10 +197,5 @@ public class GameController : MonoBehaviour {
 
 
 
-	IEnumerator laser_die(){
-		yield return new WaitForSeconds(5f);
-		lineRenderer.enabled = false;
-		
-	}
 
 }

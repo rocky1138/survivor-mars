@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11449370}
   - 114: {fileID: 11476462}
   - 82: {fileID: 8270346}
+  - 81: {fileID: 8167548}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -30,6 +31,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!81 &8167548
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149370}
+  m_Enabled: 1
 --- !u!82 &8270346
 AudioSource:
   m_ObjectHideFlags: 1
@@ -127,8 +135,6 @@ MonoBehaviour:
   Surface: {fileID: 0}
   Surface_PIP: {fileID: 0}
   CamToggleState: 0
-  UiMartianDays: {fileID: 0}
-  laserMat: {fileID: 0}
 --- !u!114 &11476462
 MonoBehaviour:
   m_ObjectHideFlags: 1
