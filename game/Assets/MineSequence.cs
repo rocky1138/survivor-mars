@@ -29,23 +29,34 @@ public class MineSequence : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (isMining == false  ) {
-//			StopCoroutine (mineAnimation(dest));
-		}
+
 	}
 
-	public void Mine(Vector3 dest){
+	public void Mine(Vector3 dest) {
+		
+		Debug.Log("Start Mining.");
+		
 		isMining = true;
 		gameObject.GetComponent<Robot_surfaceMove>().moving = false;
 		audio.Play ();
 		StopCoroutine ("mineAnimation");//if already running  DOESNT SEEM TO BE STOPPING
 		StartCoroutine (mineAnimation(dest));
 	}
+	
+	public void StopMining () {
+		
+		Debug.Log("Stop Mining.");
+		
+		isMining = false;
+		audio.Stop();
+		gameObject.GetComponent<ResourceConverter>().online = false;
+		
+		StopCoroutine("mineAnimation");
+	}
 
+	IEnumerator mineAnimation(Vector3 dest) {
 
-	IEnumerator mineAnimation(Vector3 dest){
-
-		while (true) {
+		while (isMining) {
 				
 				Vector3 destSkew = new Vector3(dest.x + Random.Range(-skew,skew), dest.y + Random.Range(-skew,skew), dest.z + Random.Range(-skew,skew));
 				lineRenderer.enabled = true;

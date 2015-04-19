@@ -42,6 +42,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450750}
+  - 114: {fileID: 11498262}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -75,6 +76,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450754}
+  - 114: {fileID: 11498270}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -90,6 +92,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450756}
+  - 114: {fileID: 11498268}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -108,6 +111,7 @@ GameObject:
   - 33: {fileID: 3350750}
   - 23: {fileID: 2350750}
   - 64: {fileID: 6478870}
+  - 114: {fileID: 11498254}
   m_Layer: 0
   m_Name: Mining-Ice
   m_TagString: Mining-Ice
@@ -294,6 +298,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450780}
+  - 114: {fileID: 11498272}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -411,6 +416,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450794}
+  - 114: {fileID: 11498264}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -480,6 +486,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450802}
+  - 114: {fileID: 11498278}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -646,6 +653,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450822}
+  - 114: {fileID: 11498260}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -963,6 +971,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450860}
+  - 114: {fileID: 11498276}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -1044,6 +1053,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450870}
+  - 114: {fileID: 11498266}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -1095,6 +1105,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450876}
+  - 114: {fileID: 11498274}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -1110,6 +1121,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450878}
+  - 114: {fileID: 11498256}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -1159,6 +1171,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450884}
+  - 114: {fileID: 11498258}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -1316,8 +1329,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150768}
-  m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: -9.39999962, y: 0, z: 80.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 450876}
@@ -1511,7 +1524,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150800}
   m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 31.3999996, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 450822}
@@ -1523,7 +1536,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 361, y: 0, z: -100}
+  m_LocalPosition: {x: 359.578003, y: 1.06700003, z: -101.289001}
   m_LocalScale: {x: .0299999993, y: .0250000004, z: .0350000001}
   m_Children:
   - {fileID: 450832}
@@ -1717,9 +1730,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150830}
-  m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: -118.699997, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: .403187037, y: .0862518176, z: -.190582991, w: .890886605}
+  m_LocalPosition: {x: -128.800003, y: -3.5, z: 23.8999996}
+  m_LocalScale: {x: 3, y: 6, z: 4}
   m_Children: []
   m_Father: {fileID: 450860}
   m_RootOrder: 0
@@ -1730,7 +1743,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150832}
   m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: -35.2000008, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 450802}
@@ -1917,7 +1930,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 363.161987, y: 0, z: -98.6439972}
+  m_LocalPosition: {x: 363.940002, y: 0, z: -98.6439972}
   m_LocalScale: {x: .0299999993, y: .0250000004, z: .0350000001}
   m_Children:
   - {fileID: 450830}
@@ -2015,8 +2028,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 363.160004, y: 0, z: -110.639999}
-  m_LocalScale: {x: .0299999993, y: .0250000004, z: .0350000001}
+  m_LocalPosition: {x: 362, y: 1.16700006, z: -109.790001}
+  m_LocalScale: {x: .0500000007, y: .0500000007, z: .0500000007}
   m_Children:
   - {fileID: 450768}
   m_Father: {fileID: 450850}
@@ -3698,6 +3711,162 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chanceOfDisablePercent: 0
+--- !u!114 &11498254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 20
+--- !u!114 &11498256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11498258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11498260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 2
+--- !u!114 &11498262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11498264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11498266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11498268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11498270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11498272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11498274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 4
+--- !u!114 &11498276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11498278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
 --- !u!135 &13550746
 SphereCollider:
   m_ObjectHideFlags: 1
