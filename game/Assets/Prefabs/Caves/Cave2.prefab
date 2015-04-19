@@ -111,6 +111,7 @@ GameObject:
   - 4: {fileID: 451112}
   - 33: {fileID: 3351104}
   - 23: {fileID: 2351104}
+  - 64: {fileID: 6407366}
   m_Layer: 0
   m_Name: Mining-Ice
   m_TagString: Mining-Ice
@@ -4549,6 +4550,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151306}
   m_Mesh: {fileID: 4300006, guid: d2e9ecb3af05fb341854b61a4916c93a, type: 3}
+--- !u!64 &6407366
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300004, guid: 7400c9690a4d7844bace350d59ec8f49, type: 3}
 --- !u!64 &6451100
 MeshCollider:
   m_ObjectHideFlags: 1

@@ -75,8 +75,7 @@ public class GameController : MonoBehaviour {
 						//Instantiate(click, hitInfo.point, Quaternion.identity);
 						currentRobot.GetComponent<Robot_surfaceMove>().target = hitInfo.point;
 						currentRobot.GetComponent<Robot_surfaceMove>().moving = true;
-					}
-					else {
+					} else {
 						DeselectRobot();
 					}
 				}
@@ -84,20 +83,25 @@ public class GameController : MonoBehaviour {
 				if (hitInfo.collider.tag == "CaveFloor")	{
 
 					if (currentRobot != null && currentRobot.GetComponent<Robot_surfaceMove>().inTube == true) {
-						//currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
 						Instantiate(click, hitInfo.point, Quaternion.identity);
 						currentRobot.GetComponent<Robot_surfaceMove>().target = hitInfo.point;
 						currentRobot.GetComponent<Robot_surfaceMove>().moving = true;
-					}
-					else {
+					} else {
 						DeselectRobot();
 					}
-					//moving = true;
-					//dest = hitInfo.collider.transform;
 					
 				} else if (hitInfo.collider.tag == "Mining-Ore") {
 					if (currentRobot != null) {
 						currentRobot.GetComponent<MineSequence>().Mine(hitInfo.point);
+						currentRobot.GetComponent<ResourceOutput>().type = ResourceType.Ore;
+						currentRobot.GetComponent<ResourceConverter>().online = true;
+
+					}
+				
+				} else if (hitInfo.collider.tag == "Mining-Ice") {
+					if (currentRobot != null) {
+						currentRobot.GetComponent<MineSequence>().Mine(hitInfo.point);
+						currentRobot.GetComponent<ResourceOutput>().type = ResourceType.Ice;
 						currentRobot.GetComponent<ResourceConverter>().online = true;
 
 					}
@@ -188,7 +192,7 @@ public class GameController : MonoBehaviour {
 
 	}
 
-	public void CamReset(){
+	public void CamReset() {
 		currentRobot.transform.GetChild (2).gameObject.SetActive (false);	//Turn off Fullscreen Robot Cam
 		Surface_PIP.gameObject.SetActive(false);							//Turn off Surface PIP
 		Surface.tag = "MainCamera";											//Retag main camer
