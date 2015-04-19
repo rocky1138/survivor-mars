@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public enum TechnologyType {
-  AlgaeFarm, SolarArray, MiningLaser,Settlement
+  AlgaeFarm, SolarArray, MiningLaser, Settlement
 }
 
 class TechLevel {
@@ -29,12 +29,12 @@ class Technology : MonoBehaviour {
   public Dictionary<TechnologyType, TechLevel> techLevels = new Dictionary<TechnologyType, TechLevel> {
     {TechnologyType.AlgaeFarm, new TechLevel(TechnologyType.AlgaeFarm, 0, 1)},
     {TechnologyType.SolarArray, new TechLevel(TechnologyType.SolarArray, 0, 1)},
-    {TechnologyType.MiningLaser, new TechLevel(TechnologyType.MiningLaser, 0, 1)}
+    {TechnologyType.MiningLaser, new TechLevel(TechnologyType.MiningLaser, 0, 1)},
+    {TechnologyType.Settlement, new TechLevel(TechnologyType.Settlement, 0, 1)}
   };
 
   public void Upgrade(TechnologyType tech) {
     techLevels[tech].upgrade();
-		//Debug.Log (tech);
   }
 
   void Start() {

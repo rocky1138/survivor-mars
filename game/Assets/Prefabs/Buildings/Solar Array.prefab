@@ -962,6 +962,7 @@ GameObject:
   - 4: {fileID: 435256}
   - 95: {fileID: 9535520}
   - 65: {fileID: 6535520}
+  - 114: {fileID: 11474046}
   m_Layer: 0
   m_Name: Solar Array
   m_TagString: Building
@@ -10820,6 +10821,26 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!114 &11474046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ff55a0486674f88a70674d32558529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converter: {fileID: 11490048}
+  condition: 1
+  maxHP: 100
+  HP: 100
+  currentLevel: 0
+  tech: 1
+  techBonuses:
+  - 0
+  - .330000013
 --- !u!114 &11490046
 MonoBehaviour:
   m_ObjectHideFlags: 1
