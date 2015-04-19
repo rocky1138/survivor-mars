@@ -1113,7 +1113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &173570
 GameObject:
   m_ObjectHideFlags: 1
@@ -6696,7 +6696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   likelihood: .0500000007
-  frequency: 10
+  frequency: 1
   dustStorm: {fileID: 127864}
   asteroid: {fileID: 192126, guid: 99962d22e49a54f46939dec00ededc0a, type: 2}
   warning: {fileID: 0}

@@ -27,6 +27,7 @@ public class Peril : MonoBehaviour {
 					dustStorm.SetActive(true);
 					audio.PlayOneShot(warning);
 					warningNum = 0;
+					GameController.GetComponent<ToastNotifications>().WarnNotifications(warningNum);
 				}
 				if (peril == 1 && !dustStorm.activeSelf) {
 					Debug.Log("Asteroid begins!");
@@ -37,8 +38,9 @@ public class Peril : MonoBehaviour {
 					GameObject target = targets[Random.Range(0, targets.Length)];
 					Instantiate(asteroid, new Vector3(target.transform.position.x, target.transform.position.y + 20, target.transform.position.z), transform.rotation);
 					warningNum = 1;
+					GameController.GetComponent<ToastNotifications>().WarnNotifications(warningNum);
 				}
-			GameController.GetComponent<ToastNotifications>().WarnNotifications(warningNum);
+
 			}
 	}
 }

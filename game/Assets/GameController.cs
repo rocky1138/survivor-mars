@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour {
 
 
 
+
 	Color laserColor1 = new Color(1, 0, 0, 0.5f);
 	Color laserColor2 = new Color(1, .17f, .17f, 0.4f);
 	LineRenderer lineRenderer;
@@ -113,13 +114,7 @@ public class GameController : MonoBehaviour {
 				} else if (hitInfo.collider.tag == "Mining-Ore") {
 					if (currentRobot != null) {
 
-
-
 						currentRobot.GetComponent<ResourceConverter>().online = true;
-
-
-
-
 						//Lasers
 						lineRenderer.enabled=true;
 						//lineRenderer.SetPosition(0, new Vector3(transform.position.x, transform.position.y - 2, transform.position.z));
