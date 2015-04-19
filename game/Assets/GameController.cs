@@ -11,7 +11,8 @@ public class GameController : MonoBehaviour {
 	public GameObject[] SpawnPoints;
 	public GameObject CamToggleButton;
 	public GameObject click;
-
+	public float mineDistanceLimit;
+	public float moveDistanceLimit;
 	public Camera Surface;
 	public Camera Surface_PIP;
 	public bool CamToggleState = false;
@@ -21,7 +22,10 @@ public class GameController : MonoBehaviour {
 	// How many seconds the user has played the game.
 	private int numSecondsPlayed = 0;
 	public GameObject UiMartianDays;
-
+	bool firstTube = false;
+	bool firstOre = false;
+	bool firstIce = false;
+	float distance;
 	//public Transform target;
 
 	// Use this for initialization
@@ -55,8 +59,11 @@ public class GameController : MonoBehaviour {
 
 
 
-
-
+				if (currentRobot != null){
+					distance = Vector3.Distance (currentRobot.transform.position, hitInfo.point);
+					Debug.Log("DISTANCE     " + distance);
+				}	
+				
 				Physics.Raycast (ray, out hitInfo, Mathf.Infinity);
 				
 				Debug.DrawLine (ray.origin, hitInfo.point);
@@ -85,8 +92,7 @@ public class GameController : MonoBehaviour {
 					}
 				}
 					
-				if (hitInfo.collider.tag == "CaveFloor")	{
-
+				if (hitInfo.collider.tag == "CaveFloor" && distance < moveDistanceLimit)	{
 					if (currentRobot != null && currentRobot.GetComponent<Robot_surfaceMove>().inTube == true) {
 						Instantiate(click, hitInfo.point, Quaternion.identity);
 						currentRobot.GetComponent<MineSequence>().StopMining();
@@ -96,16 +102,24 @@ public class GameController : MonoBehaviour {
 						DeselectRobot();
 					}
 					
-				} else if (hitInfo.collider.tag == "Mining-Ore") {
+				} else if (hitInfo.collider.tag == "Mining-Ore" && distance < mineDistanceLimit) {
 					if (currentRobot != null) {
+						if (firstOre == false) {
+							firstOre = true;
+							GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (6);
+						}
 						currentRobot.GetComponent<MineSequence>().Mine(hitInfo.point);
 						currentRobot.GetComponent<ResourceOutput>().type = ResourceType.Ore;
 						currentRobot.GetComponent<ResourceConverter>().online = true;
 
 					}
 				
-				} else if (hitInfo.collider.tag == "Mining-Ice") {
+				} else if (hitInfo.collider.tag == "Mining-Ice" && distance < mineDistanceLimit) {
 					if (currentRobot != null) {
+						if (firstIce == false) {
+							firstIce = true;
+							GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (7);
+						}
 						currentRobot.GetComponent<MineSequence>().Mine(hitInfo.point);
 						currentRobot.GetComponent<ResourceOutput>().type = ResourceType.Ice;
 						currentRobot.GetComponent<ResourceConverter>().online = true;
@@ -121,6 +135,10 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void EnterTube(int tube, GameObject robot){
+		if (firstTube == false) {
+			firstTube = true;
+			GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (5);
+		}
 			CamToggleButton.SetActive(true);
 			robot.transform.position = SpawnPoints[tube].transform.position;
 			SwitchRobot (robot);

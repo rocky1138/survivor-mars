@@ -40,7 +40,7 @@ public class MineSequence : MonoBehaviour {
 		gameObject.GetComponent<Robot_surfaceMove>().moving = false;
 		audio.Play ();
 		StopCoroutine ("mineAnimation");//if already running  DOESNT SEEM TO BE STOPPING
-		StartCoroutine (mineAnimation(dest));
+		StartCoroutine (mineAnimation(dest));	
 	}
 	
 	public void StopMining () {
@@ -55,21 +55,21 @@ public class MineSequence : MonoBehaviour {
 	}
 
 	IEnumerator mineAnimation(Vector3 dest) {
+			while (isMining) {
+	
+					Vector3 destSkew = new Vector3 (dest.x + Random.Range (-skew, skew), dest.y + Random.Range (-skew, skew), dest.z + Random.Range (-skew, skew));
+					lineRenderer.enabled = true;
+					//lineRenderer.SetPosition(0, new Vector3(transform.position.x, transform.position.y - 2, transform.position.z));
+					lineRenderer.SetPosition (0, transform.position);
+					//lineRenderer.SetPosition (1, dest);
+					lineRenderer.SetPosition (1, destSkew);
+					Instantiate (sparks, destSkew, Quaternion.identity);
+					//StartCoroutine(laser_die());
+					yield return new WaitForSeconds (Random.Range (.3f, 1f));
+					lineRenderer.enabled = false;
+					yield return new WaitForSeconds (Random.Range (.1f, .5f));
+			}
 
-		while (isMining) {
-				
-				Vector3 destSkew = new Vector3(dest.x + Random.Range(-skew,skew), dest.y + Random.Range(-skew,skew), dest.z + Random.Range(-skew,skew));
-				lineRenderer.enabled = true;
-				//lineRenderer.SetPosition(0, new Vector3(transform.position.x, transform.position.y - 2, transform.position.z));
-				lineRenderer.SetPosition (0, transform.position);
-				//lineRenderer.SetPosition (1, dest);
-				lineRenderer.SetPosition(1, destSkew);
-				Instantiate (sparks, destSkew, Quaternion.identity);
-				//StartCoroutine(laser_die());
-			yield return new WaitForSeconds (Random.Range(.3f, 1f));
-				lineRenderer.enabled = false;
-			yield return new WaitForSeconds (Random.Range(.1f, .5f));
-		}
 	}
 
 }
