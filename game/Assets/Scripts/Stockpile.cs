@@ -10,6 +10,7 @@ using System.Collections.Generic;
     public Dictionary<ResourceType, int> maxima;
     public Text O2Stock;
     public Text CO2Stock;
+    public Text PowerStock;
     public Text OreStock;
     public Text IceStock;
 
@@ -29,10 +30,10 @@ using System.Collections.Generic;
       //initializeResource(ResourceType.BioWaste, 0, 100);
       //initializeResource(ResourceType.H2O, 250, 250);
       //initializeResource(ResourceType.WasteWater, 0, 150);
-      initializeResource(ResourceType.O2, 200, 200);
-      initializeResource(ResourceType.CO2, 0, 200);
+      initializeResource(ResourceType.O2, 100, 200);
+      initializeResource(ResourceType.CO2, 100, 200);
       //initializeResource(ResourceType.H2, 0, 500);
-      //initializeResource(ResourceType.Power, 1500, 1500);
+      initializeResource(ResourceType.Power, 500, 1500);
       initializeResource(ResourceType.Ore, 0, 200);
       initializeResource(ResourceType.Metal, 0, 100);
       initializeResource(ResourceType.Silicates, 0, 100);
@@ -40,13 +41,14 @@ using System.Collections.Generic;
     }
 
     void Update() {
-      O2Stock.text = ": " + stocks[ResourceType.O2];
-      CO2Stock.text = ": " + stocks[ResourceType.CO2];
-      OreStock.text = ": " + stocks[ResourceType.Ore];
-      IceStock.text = ": " + stocks[ResourceType.Ice];
+      O2Stock.text = ":" + stocks[ResourceType.O2];
+      CO2Stock.text = ":" + stocks[ResourceType.CO2];
+      PowerStock.text = ":" + stocks[ResourceType.Power];
+      OreStock.text = ":" + stocks[ResourceType.Ore];
+      IceStock.text = ":" + stocks[ResourceType.Ice];
     }
 
-    public int updateStockLevel(Resource delta, bool decrease=false) {
+    public int updateStockLevel(ResourceAmount delta, bool decrease=false) {
       int newStock = stocks[delta.type] + ((decrease ? -1 : 1) * delta.amount);
       if (newStock >= 0) {
         if (newStock <= maxima[delta.type]) {

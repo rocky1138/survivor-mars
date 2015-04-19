@@ -7,15 +7,21 @@ using System.Collections.Generic;
 class ResourceConverter : MonoBehaviour {
     public ResourceInput[] inputs;
     public ResourceOutput[] outputs;
-    public int cycleTime;
+    public float cycleTime;
     private float progress;
     private bool ready;
     public bool online;
+    public float efficiency = 1;
 
     public Stockpile stockpile;
 
-    ResourceConverter(int cycleTime) {
+    public ResourceConverter(int cycleTime) {
       this.cycleTime = cycleTime;
+      this.progress = 0;
+      this.ready = false;
+    }
+    public ResourceConverter() {
+       this.cycleTime = 0;
       this.progress = 0;
       this.ready = false;
     }
@@ -39,17 +45,18 @@ class ResourceConverter : MonoBehaviour {
         }
         if (ready) {
           foreach(ResourceInput input in inputs) {
-            stockpile.updateStockLevel(input, true);
+            stockpile.updateStockLevel(
+              new ResourceAmount(input.type, input.amount), true);
           }
         }
       } else {
-        progress += Time.deltaTime;
+        progress += efficiency * Time.deltaTime;
         if (progress > cycleTime) {
           ready = false;
           progress = 0;
 
           foreach(ResourceOutput output in outputs) {
-            stockpile.updateStockLevel(output);
+            stockpile.updateStockLevel(new ResourceAmount(output.type, output.amount));
           }
         }
       }
