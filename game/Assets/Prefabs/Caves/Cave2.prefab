@@ -112,6 +112,7 @@ GameObject:
   - 33: {fileID: 3351104}
   - 23: {fileID: 2351104}
   - 64: {fileID: 6407366}
+  - 114: {fileID: 11453884}
   m_Layer: 0
   m_Name: Mining-Ice
   m_TagString: Mining-Ice
@@ -279,6 +280,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451132}
+  - 114: {fileID: 11453864}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -344,6 +346,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451140}
+  - 114: {fileID: 11453870}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -515,6 +518,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451160}
+  - 114: {fileID: 11453872}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -619,6 +623,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451172}
+  - 114: {fileID: 11453876}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -1097,6 +1102,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451230}
+  - 114: {fileID: 11453874}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -1130,6 +1136,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451234}
+  - 114: {fileID: 11453860}
+  - 114: {fileID: 11453862}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -1330,6 +1338,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451258}
+  - 114: {fileID: 11453880}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -1417,6 +1426,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451268}
+  - 114: {fileID: 11453882}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -1482,6 +1492,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451276}
+  - 114: {fileID: 11453866}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -1497,6 +1508,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451278}
+  - 114: {fileID: 11453878}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -1528,6 +1540,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451282}
+  - 114: {fileID: 11453868}
   m_Layer: 0
   m_Name: Mining-Ore
   m_TagString: Mining-Ore
@@ -2639,7 +2652,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 361, y: 0, z: -99.362999}
+  m_LocalPosition: {x: 361, y: .878000021, z: -99.362999}
   m_LocalScale: {x: .0299999993, y: .0250000004, z: .0350000001}
   m_Children:
   - {fileID: 451176}
@@ -5858,6 +5871,162 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chanceOfDisablePercent: 0
+--- !u!114 &11453860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11453862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11453864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11453866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11453868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11453870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11453872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11453874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11453876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11453878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11453880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11453882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+--- !u!114 &11453884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ad4e9b9bcd0d45bd5bfaa5ed3809a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 20
 --- !u!135 &13551100
 SphereCollider:
   m_ObjectHideFlags: 1
