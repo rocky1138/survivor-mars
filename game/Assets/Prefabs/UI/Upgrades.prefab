@@ -28,6 +28,7 @@ GameObject:
   - 114: {fileID: 11477772}
   - 114: {fileID: 11412856}
   - 114: {fileID: 11471498}
+  - 114: {fileID: 11408862}
   m_Layer: 0
   m_Name: Algae
   m_TagString: Untagged
@@ -82,6 +83,7 @@ GameObject:
   - 114: {fileID: 11477780}
   - 114: {fileID: 11471494}
   - 114: {fileID: 11471496}
+  - 114: {fileID: 11413320}
   m_Layer: 0
   m_Name: Solar
   m_TagString: Untagged
@@ -177,6 +179,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &11408862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f103a580f87c4dd4b0c04665505b3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 6
+  amount: 25
 --- !u!114 &11412856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,6 +204,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tech: 0
+  costs: []
+  payable: 0
+--- !u!114 &11413320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f103a580f87c4dd4b0c04665505b3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 3
+  amount: 25
 --- !u!114 &11471494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,6 +231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tech: 1
+  costs: []
+  payable: 0
 --- !u!114 &11471496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -273,6 +305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tech: 1
+  costs: []
+  payable: 0
 --- !u!114 &11477770
 MonoBehaviour:
   m_ObjectHideFlags: 1

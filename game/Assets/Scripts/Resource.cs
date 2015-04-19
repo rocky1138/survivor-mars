@@ -34,5 +34,8 @@ public class Resource : MonoBehaviour {
     {ResourceType.Ice, "Ice"}};
   public ResourceType type;
   public int amount;
+  public ResourceAmount toResourceAmount() {
+    return new ResourceAmount(type, amount);
+  }
 }
 
