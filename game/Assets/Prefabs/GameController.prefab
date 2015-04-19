@@ -127,7 +127,6 @@ MonoBehaviour:
   Surface: {fileID: 0}
   Surface_PIP: {fileID: 0}
   CamToggleState: 0
-  UiMartianDays: {fileID: 0}
   laserMat: {fileID: 0}
 --- !u!114 &11476462
 MonoBehaviour:

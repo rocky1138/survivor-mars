@@ -223,6 +223,7 @@
      <Compile Include="Assets\Menu.cs" />
      <Compile Include="Assets\Peril.cs" />
      <Compile Include="Assets\Robot_surfaceMove.cs" />
+     <Compile Include="Assets\Scripts\BuildingManager.cs" />
      <Compile Include="Assets\Scripts\Laser.cs" />
      <Compile Include="Assets\Scripts\OreRandom.cs" />
      <Compile Include="Assets\Scripts\Resource.cs" />
@@ -232,6 +233,8 @@
      <Compile Include="Assets\Scripts\RobotMiner.cs" />
      <Compile Include="Assets\Scripts\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Stockpile.cs" />
+     <Compile Include="Assets\Scripts\TechUpgrader.cs" />
+     <Compile Include="Assets\Scripts\Technology.cs" />
      <Compile Include="Assets\SpawnEntrances.cs" />
      <Compile Include="Assets\ToastNotifications.cs" />
      <Compile Include="Assets\rotateLight.cs" />

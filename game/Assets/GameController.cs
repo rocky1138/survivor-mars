@@ -78,9 +78,9 @@ public class GameController : MonoBehaviour {
 					if (hitInfo.collider.gameObject != currentRobot && currentRobot != null){
 						DeselectRobot();
 					}
-					
-			
-					SwitchRobot(hitInfo.transform.gameObject);
+					if (hitInfo.collider.gameObject != currentRobot){
+						SwitchRobot(hitInfo.transform.gameObject);
+					}
 				}
 				
 				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false && currentRobot != null) {
@@ -140,7 +140,7 @@ public class GameController : MonoBehaviour {
 	public void EnterTube(int tube, GameObject robot){
 			CamToggleButton.SetActive(true);
 			robot.transform.position = SpawnPoints[tube].transform.position;
-
+			SwitchRobot (robot);
 
 	}
 
