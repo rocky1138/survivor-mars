@@ -16,9 +16,9 @@ class TechLevel {
     current = c;
     max = m;
   }
-  public void Upgrade(int level) {
-    if (level <= max) {
-      current = level;
+  public void upgrade() {
+    if (current < max) {
+      current += 1 ;
     } else {
       current = max;
     }
@@ -27,13 +27,13 @@ class TechLevel {
 
 class Technology : MonoBehaviour {
   public Dictionary<TechnologyType, TechLevel> techLevels = new Dictionary<TechnologyType, TechLevel> {
-    {TechnologyType.AlgaeFarm, new TechLevel(TechnologyType.AlgaeFarm, 1, 2)},
-    {TechnologyType.SolarArray, new TechLevel(TechnologyType.SolarArray, 1, 2)},
-    {TechnologyType.MiningLaser, new TechLevel(TechnologyType.MiningLaser, 1, 2)}
+    {TechnologyType.AlgaeFarm, new TechLevel(TechnologyType.AlgaeFarm, 0, 1)},
+    {TechnologyType.SolarArray, new TechLevel(TechnologyType.SolarArray, 0, 1)},
+    {TechnologyType.MiningLaser, new TechLevel(TechnologyType.MiningLaser, 0, 1)}
   };
 
-  public void Upgrade(TechnologyType tech, int level) {
-    techLevels[tech].Upgrade(level);
+  public void Upgrade(TechnologyType tech) {
+    techLevels[tech].upgrade();
   }
 
   void Start() {

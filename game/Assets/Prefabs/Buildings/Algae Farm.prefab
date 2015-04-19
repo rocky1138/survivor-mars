@@ -29,6 +29,7 @@ GameObject:
   - 4: {fileID: 452392}
   - 95: {fileID: 9552426}
   - 65: {fileID: 6552426}
+  - 114: {fileID: 11449328}
   m_Layer: 0
   m_Name: Algae Farm
   m_TagString: Building
@@ -929,6 +930,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   amount: 50
+--- !u!114 &11449328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ff55a0486674f88a70674d32558529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converter: {fileID: 11445814}
+  condition: 1
+  maxHP: 100
+  HP: 100
+  currentLevel: 0
+  tech: 0
+  techBonuses:
+  - 0
+  - .25
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
