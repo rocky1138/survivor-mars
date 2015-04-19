@@ -88,6 +88,7 @@ public class GameController : MonoBehaviour {
 
 					if (currentRobot != null && currentRobot.GetComponent<Robot_surfaceMove>().inTube == true) {
 						Instantiate(click, hitInfo.point, Quaternion.identity);
+						currentRobot.GetComponent<MineSequence>().StopMining();
 						currentRobot.GetComponent<Robot_surfaceMove>().target = new Vector3( hitInfo.point.x,  hitInfo.point.y+2,  hitInfo.point.z);
 						currentRobot.GetComponent<Robot_surfaceMove>().moving = true;
 					} else {

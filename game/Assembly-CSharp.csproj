@@ -231,6 +231,7 @@
      <Compile Include="Assets\Scripts\ResourceConverter.cs" />
      <Compile Include="Assets\Scripts\ResourceInput.cs" />
      <Compile Include="Assets\Scripts\ResourceOutput.cs" />
+     <Compile Include="Assets\Scripts\ResourceVolume.cs" />
      <Compile Include="Assets\Scripts\RobotMiner.cs" />
      <Compile Include="Assets\Scripts\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Stockpile.cs" />
