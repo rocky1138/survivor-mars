@@ -16,14 +16,15 @@ public class GameController : MonoBehaviour {
 	public Camera Surface_PIP;
 	public bool CamToggleState = false;
 	Camera currentRobotCam;
+	
+	// How many seconds the user has played the game.
+	private int numSecondsPlayed = 0;
+	public GameObject UiMartianDays;
 
 	//public Transform target;
 
 	// Use this for initialization
 	void Start () {
-
-		
-
 
 		for(int i = 0; i < Robots.Length; i++)
 		{
@@ -36,6 +37,9 @@ public class GameController : MonoBehaviour {
 				Robots[i].transform.transform.GetChild (4).gameObject.GetComponent<TextMesh>().text = (i+1).ToString();
 			}
 		}
+		
+		// Start gameplay timer which tells us how long they've been playing.
+		InvokeRepeating("PlayTimer", 0.0f, 1.0f);
 	}
 	
 	void Update () {
@@ -199,7 +203,22 @@ public class GameController : MonoBehaviour {
 		Surface.camera.enabled = true;										//Enabled surface camera
 	}
 
+	///
+	/// Increment number of seconds played.
+	///
+	void PlayTimer() {
+		numSecondsPlayed++;
+		UpdateUiMartianDays();
+	}
 
+	///
+	/// Show how many days they have been playing.
+	/// In this game, a Martian day lasts 8 real-time minutes.
+	///
+	void UpdateUiMartianDays() {
+		int martianDaysPlayed = (int) Mathf.Floor(numSecondsPlayed / 60 / 8);
+		UiMartianDays.GetComponent<Text>().text = "Martian Days " + martianDaysPlayed.ToString(); 
+	}
 
 
 }
