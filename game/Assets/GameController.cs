@@ -16,10 +16,12 @@ public class GameController : MonoBehaviour {
 	public Camera Surface_PIP;
 	public bool CamToggleState = false;
 	Camera currentRobotCam;
+	public float min2day = 1;
 	
 	// How many seconds the user has played the game.
 	private int numSecondsPlayed = 0;
 	public GameObject UiMartianDays;
+	bool firstTube = false;
 
 	//public Transform target;
 
@@ -72,9 +74,9 @@ public class GameController : MonoBehaviour {
 					}
 				}
 				
-				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false && currentRobot != null) {
+				if (hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") {
 
-					if (currentRobot != null) {
+					if (currentRobot != null && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false) {
 						//currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
 						//Instantiate(click, hitInfo.point, Quaternion.identity);
 						currentRobot.GetComponent<Robot_surfaceMove>().target = hitInfo.point;
@@ -119,6 +121,10 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void EnterTube(int tube, GameObject robot){
+		if (firstTube == false) {
+			firstTube = true;
+			GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (5);
+		}
 			CamToggleButton.SetActive(true);
 			robot.transform.position = SpawnPoints[tube].transform.position;
 			SwitchRobot (robot);
@@ -216,8 +222,16 @@ public class GameController : MonoBehaviour {
 	/// In this game, a Martian day lasts 8 real-time minutes.
 	///
 	void UpdateUiMartianDays() {
-		int martianDaysPlayed = (int) Mathf.Floor(numSecondsPlayed / 60 / 8);
-		UiMartianDays.GetComponent<Text>().text = "Martian Days " + martianDaysPlayed.ToString(); 
+		int martianDaysPlayed = (int) Mathf.Floor(numSecondsPlayed / 60 / min2day);
+		//Dirty code thanks to Richard.. sorry
+		if (martianDaysPlayed == 7) {GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (12);}
+		if (martianDaysPlayed == 14) {GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (13);}
+		if (martianDaysPlayed == 21) {GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (14);}
+		if (martianDaysPlayed == 30) {GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (15);}
+		if (martianDaysPlayed == 687) {GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (16);}
+		//
+		UiMartianDays.GetComponent<Text>().text = "Martian Days " + martianDaysPlayed.ToString();
+
 	}
 
 
