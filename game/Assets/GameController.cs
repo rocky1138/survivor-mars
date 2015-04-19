@@ -17,23 +17,29 @@ public class GameController : MonoBehaviour {
 	public bool CamToggleState = false;
 	Camera currentRobotCam;
 
-	// How many seconds the user has played the game.
-	private int numSecondsPlayed = 0;
-	public GameObject UiMartianDays;
+
 
 	Color laserColor1 = new Color(1, 0, 0, 0.5f);
+	Color laserColor2 = new Color(1, .17f, .17f, 0.4f);
 	LineRenderer lineRenderer;
+	//public Transform Laser;
 	public Material laserMat;
 	
+	//public Transform target;
+
+	// Use this for initialization
 	void Start () {
+
 		
-		// Lasers
+		//Lasers
 		lineRenderer = gameObject.AddComponent<LineRenderer>();
+		//lineRenderer.material = new Material (Shader.Find("Particles/Additive"));
 		lineRenderer.material = laserMat;
 		lineRenderer.SetColors(laserColor1, laserColor1);
 		lineRenderer.SetWidth(.3f,.1f);
 		lineRenderer.SetVertexCount(2);
-		
+		//Lasers
+
 		for(int i = 0; i < Robots.Length; i++)
 		{
 			if (Robots[i].gameObject.activeSelf == false){
@@ -41,10 +47,10 @@ public class GameController : MonoBehaviour {
 					RobotButtons[i].SetActive(false);
 				}
 			}
+			else {
+				Robots[i].transform.transform.GetChild (4).gameObject.GetComponent<TextMesh>().text = (i+1).ToString();
+			}
 		}
-
-		// Start gameplay timer which tells us how long they've been playing.
-		InvokeRepeating("PlayTimer", 0.0f, 1.0f);
 	}
 	
 	void Update () {
@@ -56,6 +62,10 @@ public class GameController : MonoBehaviour {
 			if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hitInfo)) {
 
 				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+
+
+
+
 
 				Physics.Raycast (ray, out hitInfo, Mathf.Infinity);
 				
@@ -69,17 +79,11 @@ public class GameController : MonoBehaviour {
 						DeselectRobot();
 					}
 					
-					currentRobot = hitInfo.transform.gameObject;
-					
-					// DUPLICATE CODE DUE TO LAZINESS SEE FUNCTION BELOW
-					if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
-						CamToggleButton.SetActive(true);
-						currentRobot.transform.GetChild(1).gameObject.SetActive(true);
-					}
-					currentRobot.transform.GetChild(3).gameObject.SetActive(true);
+			
+					SwitchRobot(hitInfo.transform.gameObject);
 				}
 				
-				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false) {
+				if ((hitInfo.collider.tag == "TubeEntrance"|| hitInfo.collider.tag == "Building") && currentRobot.GetComponent<Robot_surfaceMove>().inTube == false && currentRobot != null) {
 
 					if (currentRobot != null) {
 						//currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
@@ -94,7 +98,7 @@ public class GameController : MonoBehaviour {
 					
 				if (hitInfo.collider.tag == "CaveFloor")	{
 
-					if (currentRobot != null) {
+					if (currentRobot != null && currentRobot.GetComponent<Robot_surfaceMove>().inTube == true) {
 						//currentRobot.GetComponent<Robot_surfaceMove>().dest = hitInfo.collider.transform;
 						Instantiate(click, hitInfo.point, Quaternion.identity);
 						currentRobot.GetComponent<Robot_surfaceMove>().target = hitInfo.point;
@@ -109,7 +113,12 @@ public class GameController : MonoBehaviour {
 				} else if (hitInfo.collider.tag == "Mining-Ore") {
 					if (currentRobot != null) {
 
+
+
 						currentRobot.GetComponent<ResourceConverter>().online = true;
+
+
+
 
 						//Lasers
 						lineRenderer.enabled=true;
@@ -128,69 +137,97 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	public void EnterTube(int tube, GameObject robot) {
+	public void EnterTube(int tube, GameObject robot){
 			CamToggleButton.SetActive(true);
 			robot.transform.position = SpawnPoints[tube].transform.position;
+
+
 	}
 
-	public void SelectRobot (int num) {
+
+
+
+
+
+
+	public void SelectRobot (int num){ //legacy but didnt want to rename, wrapper for UI
+		SwitchRobot (Robots[num]);
+	}
+
+	public void SwitchRobot(GameObject newRobot){
 		DeselectRobot ();
-		currentRobot = Robots[num];
-		if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true){
-			CamToggleButton.SetActive(true);
-			currentRobot.transform.GetChild(1).gameObject.SetActive(true);
-		}
-		currentRobot.transform.GetChild(3).gameObject.SetActive(true);
-	}
-
-	public void DeselectRobot() {
+		currentRobot = newRobot;
 		if (currentRobot != null) {
-						currentRobot.transform.GetChild (1).gameObject.SetActive (false);
-						currentRobot.transform.GetChild (2).gameObject.SetActive (false);
-						currentRobot.transform.GetChild (3).gameObject.SetActive (false);
-						currentRobot = null;
-				}
-	}
+			currentRobot.transform.GetChild (3).gameObject.SetActive (true);				//Turn ON Object Highlighter
 
-	public void CamToggler() {
-		
-		Debug.Log ("CamToggler");
-		
-		CamToggleState = !CamToggleState;
-		
-		if (CamToggleState == true) {
-				currentRobot.transform.GetChild (2).gameObject.SetActive (true);
-				Surface_PIP.gameObject.SetActive(true);
-				Surface.tag = "MainCamera_Bak";
-				Surface.camera.enabled = false;
-				//currentRobot.transform.GetChild (2).tag = "MainCamera";
-		} else {
-				currentRobot.transform.GetChild (2).gameObject.SetActive (false);
-				Surface_PIP.gameObject.SetActive(false);
-				Surface.tag = "MainCamera";
-				Surface.camera.enabled = true;
+			if (currentRobot.GetComponent<Robot_surfaceMove> ().inTube == true) {			//If IN Tube
+					CamToggleButton.SetActive (true);										//Activate Camera Button
+					currentRobot.transform.GetChild (1).gameObject.SetActive (true);		//Turn on PIP
+			}
 		}
 	}
 
-	IEnumerator laser_die() {
-		yield return new WaitForSeconds(5.0f);
+	public void DeselectRobot(){
+		if (currentRobot != null) {
+
+			//if (currentRobot.GetComponent<Robot_surfaceMove> ().inTube == true) {			//If IN Tube
+				CamReset();
+			//}
+
+				currentRobot.transform.GetChild (1).gameObject.SetActive (false); 	//Turn off PIP
+				//currentRobot.transform.GetChild (2).gameObject.SetActive (false); //Turn off Fullscreen Cam
+				currentRobot.transform.GetChild (3).gameObject.SetActive (false); 	//Turn off Object Highlighter
+				currentRobot = null;											  	//Unset current robot
+				//CamToggleButton.SetActive(false);
+		}
+	}
+
+
+
+	public void CamToggler(){
+		Debug.Log ("CamToggler");
+		//CamToggleState = !CamToggleState;
+		//CamToggleState True = above ground False = Below ground
+		//CameraState: 
+		// 0 = Above Ground
+		// 1 = Below Ground
+
+
+
+		//if (CamToggleState == true ) {
+		if (Surface.tag == "MainCamera"){
+		//if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == true) {
+				currentRobot.transform.GetChild (2).gameObject.SetActive (true);	//Turn ON fullscreen Robot Cam
+				Surface_PIP.gameObject.SetActive(true);								//Turn ON Surface PIP Cam
+				Surface.tag = "MainCamera_Bak";                                     //Unassign Main Cam
+				Surface.camera.enabled = false;                                     //Turn OFF Main Cam
+				//currentRobot.transform.GetChild (2).tag = "MainCamera";
+		} 
+
+
+		//else if (currentRobot.GetComponent<Robot_surfaceMove>().inTube == false){
+		else { 
+				currentRobot.transform.GetChild (2).gameObject.SetActive (false);	//Turn off Fullscreen Robot Cam
+				Surface_PIP.gameObject.SetActive(false);							//Turn off Surface PIP
+				Surface.tag = "MainCamera";											//Retag main camer
+				Surface.camera.enabled = true;										//Enabled surface camera
+		}
+
+	}
+
+	public void CamReset(){
+		currentRobot.transform.GetChild (2).gameObject.SetActive (false);	//Turn off Fullscreen Robot Cam
+		Surface_PIP.gameObject.SetActive(false);							//Turn off Surface PIP
+		Surface.tag = "MainCamera";											//Retag main camer
+		Surface.camera.enabled = true;										//Enabled surface camera
+	}
+
+
+
+	IEnumerator laser_die(){
+		yield return new WaitForSeconds(5f);
 		lineRenderer.enabled = false;
+		
 	}
-	
-	///
-	/// Increment number of seconds played.
-	///
-	void PlayTimer() {
-		numSecondsPlayed++;
-		UpdateUiMartianDays();
-	}
-	
-	///
-	/// Show how many days they have been playing.
-	/// In this game, a Martian day lasts 8 real-time minutes.
-	///
-	void UpdateUiMartianDays() {
-		int martianDaysPlayed = (int) Mathf.Floor(numSecondsPlayed / 60 / 8);
-		UiMartianDays.GetComponent<Text>().text = "Martian Days " + martianDaysPlayed.ToString(); 
-	}
+
 }

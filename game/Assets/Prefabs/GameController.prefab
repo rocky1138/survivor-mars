@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 449370}
   - 114: {fileID: 11449370}
   - 114: {fileID: 11476462}
+  - 82: {fileID: 8270346}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -29,6 +30,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!82 &8270346
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149370}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11449370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,6 +140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f64edaae8644bb999ff91968a5c9bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AchievSound: {fileID: 8300000, guid: 7c916599e3dcac546bf891525d3e0138, type: 3}
+  WarnSound: {fileID: 8300000, guid: 1ece5d5bd225aab459eeb9d295bb1273, type: 3}
+  delay: 3
   Achievements:
   - {fileID: 21300000, guid: 3120e84694da347fcb7cda2cf8829299, type: 3}
   - {fileID: 21300000, guid: ab6168c6a510e42b3be8a0bd51a44b43, type: 3}
@@ -112,14 +174,14 @@ MonoBehaviour:
   AchievementsValue: e8030000e8030000e8030000e803000018fcffffe8030000e8030000e8030000e8030000e8030000e8030000e8030000e8030000
   Perils:
   - {fileID: 21300000, guid: ba8af034f6dd54d3d9d9380c93334c3b, type: 3}
-  - {fileID: 21300000, guid: 0894aee16a7ac452ca32543c2afe54a1, type: 3}
-  - {fileID: 21300000, guid: 23a157879077f435d811ec1fab232533, type: 3}
   - {fileID: 21300000, guid: 404b4aa112f7948e889ea3b686a15796, type: 3}
+  - {fileID: 21300000, guid: 23a157879077f435d811ec1fab232533, type: 3}
+  - {fileID: 21300000, guid: 0894aee16a7ac452ca32543c2afe54a1, type: 3}
   - {fileID: 21300000, guid: 5aefd3440a8644e9aa608801b1a168c2, type: 3}
   - {fileID: 21300000, guid: c88054b5bb3714bbc8e14ce9324c7e85, type: 3}
   PerilsText:
-  - 
-  - 
+  - Warning! Severe Dust Storm
+  - 'Warning! Meteorite Impact Imminient '
   - 
   - 
   - 
