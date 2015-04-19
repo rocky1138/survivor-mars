@@ -158,8 +158,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 92e863d08d2d044be951f1b37e65aad6, type: 3}
   - {fileID: 21300000, guid: c88054b5bb3714bbc8e14ce9324c7e85, type: 3}
   - {fileID: 21300000, guid: a8f0a16e3595c4449b88d68a020e82f2, type: 3}
-  - {fileID: 21300000, guid: 04121cbb8550a4b1ea27768afd89b4cd, type: 3}
-  - {fileID: 21300000, guid: 4e581afc332a647ee9abc611a1bc00d9, type: 3}
+  - {fileID: 21300000, guid: 36e56733ad99a4877ada1aebbd06ba96, type: 3}
+  - {fileID: 21300000, guid: 39a6fd23da2cb4bf396d4c96efc8bd8e, type: 3}
   - {fileID: 21300000, guid: ba8af034f6dd54d3d9d9380c93334c3b, type: 3}
   - {fileID: 21300000, guid: 0894aee16a7ac452ca32543c2afe54a1, type: 3}
   - {fileID: 21300000, guid: 23a157879077f435d811ec1fab232533, type: 3}
@@ -176,8 +176,8 @@ MonoBehaviour:
   - Algae Farm Upgraded!
   - Freak Out!
   - Dicovered a Lava Tube!
-  - Rockets??
-  - Survived Dust Storm
+  - You Found Ore!
+  - You Found Ice!
   - Survived Earthquake
   - Survived Disease
   - Survived Meterite Storm

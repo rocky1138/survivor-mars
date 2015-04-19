@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour {
 	private int numSecondsPlayed = 0;
 	public GameObject UiMartianDays;
 	bool firstTube = false;
+	bool firstOre = false;
+	bool firstIce = false;
 
 	//public Transform target;
 
@@ -99,6 +101,10 @@ public class GameController : MonoBehaviour {
 					
 				} else if (hitInfo.collider.tag == "Mining-Ore") {
 					if (currentRobot != null) {
+						if (firstOre == false) {
+							firstOre = true;
+							GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (6);
+						}
 						currentRobot.GetComponent<MineSequence>().Mine(hitInfo.point);
 						currentRobot.GetComponent<ResourceOutput>().type = ResourceType.Ore;
 						currentRobot.GetComponent<ResourceConverter>().online = true;
@@ -107,6 +113,10 @@ public class GameController : MonoBehaviour {
 				
 				} else if (hitInfo.collider.tag == "Mining-Ice") {
 					if (currentRobot != null) {
+						if (firstIce == false) {
+							firstIce = true;
+							GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (7);
+						}
 						currentRobot.GetComponent<MineSequence>().Mine(hitInfo.point);
 						currentRobot.GetComponent<ResourceOutput>().type = ResourceType.Ice;
 						currentRobot.GetComponent<ResourceConverter>().online = true;

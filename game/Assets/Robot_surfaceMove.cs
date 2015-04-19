@@ -18,7 +18,7 @@ public class Robot_surfaceMove : MonoBehaviour {
 
 	// Update is called once per frame
 	void LateUpdate(){
-		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target - transform.position), Time.deltaTime * 6);
+	//	transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target - transform.position), Time.deltaTime * 6);
 	}
 
 	void Update () {
@@ -34,7 +34,7 @@ public class Robot_surfaceMove : MonoBehaviour {
 		
 
 			float step = speed * Time.deltaTime;
-			
+			Debug.Log ("TARGET   " + target);
 			//transform.position = Vector3.MoveTowards (transform.position, dest.position, step);
 			transform.position = Vector3.MoveTowards (transform.position, target, step);
 								//	jitter = jitter * -1;
