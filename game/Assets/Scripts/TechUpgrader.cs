@@ -25,7 +25,7 @@ class TechUpgrader : MonoBehaviour {
   }
 
   void Update () {
-    payable = true;
+  /*  payable = true;
     foreach (UpgradeCost cost in costs) {
       if (stockpile.stocks[cost.type] < cost.amount) {
         payable = false;
@@ -33,16 +33,17 @@ class TechUpgrader : MonoBehaviour {
     }
 
     setStatus(payable);
-  }
+*/
+}
 
   public void upgrade() {
-    if (payable) {
+   // if (payable) {
       foreach (UpgradeCost cost in costs) {
         stockpile.updateStockLevel(cost.toResourceAmount(), true);
-      }
+   //   }
 
       technology.Upgrade(tech);
-
+		Debug.Log("upgrade");
       if (tech == TechnologyType.AlgaeFarm) {toast = 3;}
       if (tech == TechnologyType.SolarArray) {toast = 0;}
       GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (toast);
@@ -56,3 +57,4 @@ class TechUpgrader : MonoBehaviour {
   }
 
 }
+
