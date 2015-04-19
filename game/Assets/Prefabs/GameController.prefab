@@ -132,6 +132,8 @@ MonoBehaviour:
   - {fileID: 0}
   CamToggleButton: {fileID: 0}
   click: {fileID: 187924, guid: 4cf5488b41af2453b8a00acac45b7e01, type: 2}
+  mineDistanceLimit: 16
+  moveDistanceLimit: 50
   Surface: {fileID: 0}
   Surface_PIP: {fileID: 0}
   CamToggleState: 0

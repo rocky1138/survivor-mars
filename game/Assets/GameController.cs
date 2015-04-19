@@ -11,7 +11,8 @@ public class GameController : MonoBehaviour {
 	public GameObject[] SpawnPoints;
 	public GameObject CamToggleButton;
 	public GameObject click;
-
+	public float mineDistanceLimit;
+	public float moveDistanceLimit;
 	public Camera Surface;
 	public Camera Surface_PIP;
 	public bool CamToggleState = false;
@@ -24,7 +25,7 @@ public class GameController : MonoBehaviour {
 	bool firstTube = false;
 	bool firstOre = false;
 	bool firstIce = false;
-
+	float distance;
 	//public Transform target;
 
 	// Use this for initialization
@@ -58,8 +59,11 @@ public class GameController : MonoBehaviour {
 
 
 
-
-
+				if (currentRobot != null){
+					distance = Vector3.Distance (currentRobot.transform.position, hitInfo.point);
+					Debug.Log("DISTANCE     " + distance);
+				}	
+				
 				Physics.Raycast (ray, out hitInfo, Mathf.Infinity);
 				
 				Debug.DrawLine (ray.origin, hitInfo.point);
@@ -88,8 +92,7 @@ public class GameController : MonoBehaviour {
 					}
 				}
 					
-				if (hitInfo.collider.tag == "CaveFloor")	{
-
+				if (hitInfo.collider.tag == "CaveFloor" && distance < moveDistanceLimit)	{
 					if (currentRobot != null && currentRobot.GetComponent<Robot_surfaceMove>().inTube == true) {
 						Instantiate(click, hitInfo.point, Quaternion.identity);
 						currentRobot.GetComponent<MineSequence>().StopMining();
@@ -99,7 +102,7 @@ public class GameController : MonoBehaviour {
 						DeselectRobot();
 					}
 					
-				} else if (hitInfo.collider.tag == "Mining-Ore") {
+				} else if (hitInfo.collider.tag == "Mining-Ore" && distance < mineDistanceLimit) {
 					if (currentRobot != null) {
 						if (firstOre == false) {
 							firstOre = true;
@@ -111,7 +114,7 @@ public class GameController : MonoBehaviour {
 
 					}
 				
-				} else if (hitInfo.collider.tag == "Mining-Ice") {
+				} else if (hitInfo.collider.tag == "Mining-Ice" && distance < mineDistanceLimit) {
 					if (currentRobot != null) {
 						if (firstIce == false) {
 							firstIce = true;

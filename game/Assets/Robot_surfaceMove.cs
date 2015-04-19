@@ -18,7 +18,8 @@ public class Robot_surfaceMove : MonoBehaviour {
 
 	// Update is called once per frame
 	void LateUpdate(){
-	//	transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target - transform.position), Time.deltaTime * 6);
+		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target - transform.position), Time.deltaTime * 6);
+		//transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target - transform.position), Time.deltaTime * 6);
 	}
 
 	void Update () {
@@ -28,7 +29,7 @@ public class Robot_surfaceMove : MonoBehaviour {
 		if (moving == true && transform.position != target) {
 			
 			//transform.LookAt(dest);
-	//		transform.LookAt(target);
+			//transform.LookAt(target);
 
 		 	
 		
@@ -37,6 +38,14 @@ public class Robot_surfaceMove : MonoBehaviour {
 			Debug.Log ("TARGET   " + target);
 			//transform.position = Vector3.MoveTowards (transform.position, dest.position, step);
 			transform.position = Vector3.MoveTowards (transform.position, target, step);
+
+
+			//Vector3 targetDir = target - transform.position;
+			//float stepR = speed * Time.deltaTime;
+			//Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, stepR, 0.0F);
+			//Debug.DrawRay(transform.position, newDir, Color.red);
+			//transform.rotation = Quaternion.LookRotation(newDir);
+
 								//	jitter = jitter * -1;
 								//	Vector3 temp = new Vector3(0,jitter,0);
 								//	Debug.Log ("Jitter:" + jitter);
