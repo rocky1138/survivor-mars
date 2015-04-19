@@ -70,12 +70,12 @@ EllipsoidParticleEmitter:
   m_Enabled: 1
   m_Emit: 1
   minSize: 25
-  maxSize: 66
+  maxSize: 44
   minEnergy: 3
   maxEnergy: 3
-  minEmission: 500
-  maxEmission: 500
-  worldVelocity: {x: 25, y: 3, z: 3}
+  minEmission: 100
+  maxEmission: 100
+  worldVelocity: {x: 12, y: 3, z: 3}
   localVelocity: {x: .800000012, y: 0, z: 0}
   rndVelocity: {x: .00999999978, y: .0299999993, z: .00999999978}
   emitterVelocityScale: .0500000007
@@ -85,7 +85,7 @@ EllipsoidParticleEmitter:
   rndRotation: 0
   Simulate in Worldspace?: 1
   m_OneShot: 0
-  m_Ellipsoid: {x: 1500, y: 10, z: 1500}
+  m_Ellipsoid: {x: 400, y: 10, z: 400}
   m_MinEmitterRange: 0
 --- !u!26 &2681892
 ParticleRenderer:

@@ -12,8 +12,12 @@ class BuildingManager : MonoBehaviour {
   public float[] techBonuses;
 
   void updateConverter() {
+	  
     Debug.Log(currentLevel);
-    converter.efficiency = (1 + techBonuses[currentLevel]) * condition;
+	
+	if (techBonuses.Length > 0) {
+		converter.efficiency = (1 + techBonuses[currentLevel]) * condition;
+	}
   }
 
   void checkTech() {

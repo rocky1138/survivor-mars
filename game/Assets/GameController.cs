@@ -145,12 +145,6 @@ public class GameController : MonoBehaviour {
 
 	}
 
-
-
-
-
-
-
 	public void SelectRobot (int num){ //legacy but didnt want to rename, wrapper for UI
 		SwitchRobot (Robots[num]);
 	}
@@ -182,8 +176,6 @@ public class GameController : MonoBehaviour {
 				//CamToggleButton.SetActive(false);
 		}
 	}
-
-
 
 	public void CamToggler(){
 		Debug.Log ("CamToggler");
@@ -245,8 +237,5 @@ public class GameController : MonoBehaviour {
 		if (martianDaysPlayed == 687) {GameObject.Find ("GameController").GetComponent<ToastNotifications> ().ToastNotification (16);}
 		//
 		UiMartianDays.GetComponent<Text>().text = "Martian Days " + martianDaysPlayed.ToString();
-
 	}
-
-
 }
