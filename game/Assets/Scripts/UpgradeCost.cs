@@ -1,0 +1,2 @@
+
+class UpgradeCost: Resource {};
